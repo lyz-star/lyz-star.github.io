@@ -1,0 +1,331 @@
+<!DOCTYPE html><html lang="en" data-theme="default"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CS Learning Blog - GoodGoodStudy</title><meta name="keywords" content="CS Blog"><meta name="author" content="LYZ"><meta name="copyright" content="LYZ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="CS">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CS Learning Blog">
+<meta property="og:url" content="https://lyz-star.github.io/index.html">
+<meta property="og:site_name" content="CS Learning Blog">
+<meta property="og:description" content="CS">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lyz-star.github.io/img/head.jpg">
+<meta property="article:author" content="LYZ">
+<meta property="article:tag" content="CS Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lyz-star.github.io/img/head.jpg"><link rel="shortcut icon" href="/img/favicon1.png"><link rel="canonical" href="https://lyz-star.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CS Learning Blog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-09-21 18:47:37'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CS Learning Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">CS Learning Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/lyz-star" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lyz3568@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/09/21/hello-world/" title="Hello World">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/21/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-21T10:39:48.102Z" title="Created 2021-09-21 18:39:48">2021-09-21</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/09/20/MySQL%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/" title="MySQL常见存储引擎">     <img class="post_bg" src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL常见存储引擎"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/20/MySQL%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/" title="MySQL常见存储引擎">MySQL常见存储引擎</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-20T11:50:32.000Z" title="Created 2021-09-20 19:50:32">2021-09-20</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">查看当前版本支持的存储引擎12345678910111213141516mysql&gt;show engines;+--------------------+---------+----------------------------------------------------------------+--------------+------+------------+|Engine	|Support	|Comment	|Transactions	|XA	|Savepoints|+--------------------+---------+----------------------------------------------------------------+--------------+------+------------+|ARCHIVE	|YES	|Archivestorageengine	|NO	|NO	|NO||BLACKHOLE	|YES	|/dev/nullstorageengine(anythingyouwritetoitdisappears)|NO ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/09/19/MySQL%E5%87%BD%E6%95%B0/" title="MySQL函数">     <img class="post_bg" src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL函数"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/19/MySQL%E5%87%BD%E6%95%B0/" title="MySQL函数">MySQL函数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-19T13:49:00.000Z" title="Created 2021-09-19 21:49:00">2021-09-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">字符串函数
+
+
+函数
+功能
+
+
+
+CANCAT(S1,S2,…Sn)
+连接 S1,S2,…Sn 为一个字符串
+
+
+INSERT(str,x,y,instr)
+将字符串 str 从第 x 位置开始，y 个字符长的子串替换为字符串 instr
+
+
+LOWER(str)
+将字符串 str 中所有字符变为小写
+
+
+UPPER(str)
+将字符串 str 中所有字符变为大写
+
+
+LEFT(str ,x)
+返回字符串 str 最左边的 x 个字符
+
+
+RIGHT(str,x)
+返回字符串 str 最右边的 x 个字符
+
+
+LPAD(str,n ,pad)
+用字符串 pad 对 str 最左边进行填充，直到长度为 n 个字符长度
+
+
+RPAD(str,n,pad)
+用字符串 pad 对 str 最右边进行填充，直到长度为 n 个字符长度
+
+
+LTRIM(str)
+去掉字符串 str 左侧的空格
+
+
+RTRIM(str)
+去掉字符串 str 行尾的空格
+
+
+REPEAT(str,x)
+返回 str 重复 x 次的结果
+
+
+REPLACE(str,a,b)
+用字符串 b 替换字符串 str 中所有出现的 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/09/19/MySQL%E8%BF%90%E7%AE%97%E7%AC%A6/" title="MySQL运算符">     <img class="post_bg" src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL运算符"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/19/MySQL%E8%BF%90%E7%AE%97%E7%AC%A6/" title="MySQL运算符">MySQL运算符</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-19T13:28:30.000Z" title="Created 2021-09-19 21:28:30">2021-09-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">算术运算符​        略
+比较运算符
+&lt;=&gt;（NULL-safe）1234567mysql&gt; select 1&lt;=&gt;1,2&lt;=&gt;0 ,0&lt;=&gt;0, NULL&lt;=&gt;NULL;+-------+-------+-------+-------------+| 1&lt;=&gt;1 | 2&lt;=&gt;0 | 0&lt;=&gt;0 | NULL&lt;=&gt;NULL |+-------+-------+-------+-------------+|1 |0 |1 |1 |+-------+-------+-------+-------------+1 row in set (0.17 sec)
+
+REGEXP(正则表达式)1234567mysql&gt; select &#x27;abcdef&#x27; regexp &#x27;ab&#x27; ,&#x27;abcdefg&#x27; regexp &#x27;k&#x27;;+----------------------+---------------- ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/09/19/MySQL%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="MySQL的数据类型">     <img class="post_bg" src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL的数据类型"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/19/MySQL%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="MySQL的数据类型">MySQL的数据类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-19T04:31:06.000Z" title="Created 2021-09-19 12:31:06">2021-09-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">1.    数值类型
+1.1    整型对于整型数据，MySQL 支持在类型名称后面的小括号内指定显示宽度，例如 int(5)表示当数值宽度小于 5 位的时候在数字前面填满宽度，如果不显示指定宽度则默认为 int(11)。
+对于整型数据，MySQL 支持在类型名称后面的小括号内指定显示宽度，例如 int(5)表示当数值宽度小于 5 位的时候在数字前面填满宽度，如果不显示指定宽度则默认为 int(11)。一般配合 zerofill 使用，顾名思义，zerofill 就是用“0”填充的意思，也就是在数字位数不够的空间用字符“0”填满。以下几个例子分别描述了填充前后的区别。
+（1）创建表 t1，有 id1 和 id2 两个字段，指定其数值宽度分别为 int 和 int(5)。
+12345678910mysql&gt; create table t1 (id1 int,id2 int(5));Query OK, 0 rows affected (0.03 sec)mysql&gt; desc t1;+-------+---------+------+-----+---------+------ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/09/18/MySQL%E5%85%A5%E9%97%A8/" title="MySQL入门">     <img class="post_bg" src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/18/MySQL%E5%85%A5%E9%97%A8/" title="MySQL入门">MySQL入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-18T15:30:27.000Z" title="Created 2021-09-18 23:30:27">2021-09-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">SQL 分类​    SQL 语句主要可以划分为以下 3 个类别。
+
+DDL（Data Definition Languages）语句：数据定义语言，这些语句定义了不同的数据段、数据库、表、列、索引等数据库对象的定义。常用的语句关键字主要包括 create、drop、alter等。
+DML（Data Manipulation Language）语句：数据操纵语句，用于添加、删除、更新和查询数据库记录，并检查数据完整性，常用的语句关键字主要包括 insert、delete、udpate 和select 等。
+DCL（Data Control Language）语句：数据控制语句，用于控制不同数据段直接的许可和访问级别的语句。这些语句定义了数据库、表、字段、用户的访问权限和安全级别。主要的语句关键字包括 grant、revoke 等。
+
+DDL 语句​            DDL 是数据定义语言的缩写，简单来说，就是对数据库内部的对象进行创建、删除、修改的操作语言。它和 DML 语言的最大区别是 DML 只是对表内部数据的操作，而不涉及到表的定义、结构的修改，更不会涉及到其他对象。 DD ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/09/18/%E6%95%B0%E6%8D%AE%E6%A3%80%E7%B4%A2/" title="数据检索">     <img class="post_bg" src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据检索"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/18/%E6%95%B0%E6%8D%AE%E6%A3%80%E7%B4%A2/" title="数据检索">数据检索</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-18T13:10:33.000Z" title="Created 2021-09-18 21:10:33">2021-09-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">2.1    select初步1.从表中选取数据。1select name from users;  #从users表中选取name列
+
+123456789输出：name-------------------FishBird RabbitRaggedy AnnKing dollQueen doll
+
+
+注意：这种方式得到的数据并未排序。
+
+1SELECT id, name FROM users; #选取多列
+
+1SELECT * FROM users; #选所有列
+
+2.使用DISTINCT关键字过滤可能重复的值。1SELECT DISTINCT price FROM Products;	#选取表中的全部价格种类，重复的价格值输出一次。
+
+1234567输出：price--------142946
+
+
+注意：不能部分使用 DISTINCTDISTINCT 关键字作用于所有的列，不仅仅是跟在其后的那一列。例如，你指定 SELECT DISTINCT id, price ，除非指定的两列完全相同，否则所有的行都会被检索出来。
+
+3. 数据量太多时，限定查询结果数量1SELECT * FRO ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/09/18/%E5%95%A5%E6%98%AFSQL/" title="啥是SQL">     <img class="post_bg" src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="啥是SQL"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/18/%E5%95%A5%E6%98%AFSQL/" title="啥是SQL">啥是SQL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-18T12:18:26.000Z" title="Created 2021-09-18 20:18:26">2021-09-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">1.1    数据库​            数据库就是一个文件柜，用于存放数据。
+
+数据库（database）保存有组织的数据的容器（通常是一个文件或一组文件）。
+
+1.2    表​            当我们往文件柜中存放资料时，并非随手乱扔。而是有特定的结构。我们会创建一个表。
+
+表（table）某种特定类型数据的结构化清单。
+
+​            通常我们在同一张表中存放的是同一种类型的数据。比方说我们不应该将用户数据和购买记录放在同一张表中。并且表的名字在同一个数据库中是唯一的。
+​            表具有一定的结构。表的结构定义的表中的数据会如何存储，存储什么样的数据，数据如何被分解。用来描述表的信息就是模式。
+
+模式（schema）关于数据库和表的布局结构的信息。
+
+1.3    列​            表是由不同的列组成的。列存储表中的某一部分的信息（字段）。
+
+列（column）
+表中的字段。表一般是由多个列组成的。每一列存储字段定义的信息。等同于表格中的列。
+
+​            正确的将数据分解十分必要。例如，姓名，年龄，地址等都应该是独 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/09/18/%E5%9D%91/" title="坑">     <img class="post_bg" src="http://up.36992.com/pic/e6/c5/51/e6c551e768092c8655292d89a4034a74.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="坑"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/18/%E5%9D%91/" title="坑">坑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-17T17:32:06.000Z" title="Created 2021-09-18 01:32:06">2021-09-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a></span></div><div class="content">mysql报java.sql.SQLException: Unknown character set index for field ‘255’ received from server.原因：mysql-connector-java版本太低。通信错误
+tomcat10项目启动失败，监听器启动失败等错误查阅tomcat官网信息可知
+
+Tomcat 10 Software DownloadsWelcome to the Apache Tomcat® 10.x software download page. This page provides download links for obtaining the latest version of Tomcat 10.0.x software, as well as links to the archives of older releases.
+Unsure which version you need? Specification versions implemented, minimum Java version required an ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/09/17/Typora/" title="Typora">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/17/Typora/" title="Typora">Typora</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-09-17T14:20:32.000Z" title="Created 2021-09-17 22:20:32">2021-09-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/tools/">tools</a></span></div><div class="content">简介Typora是一款轻便简洁的Markdown编辑器，支持即时渲染技术，这也是与其他Markdown编辑器最显著的区别。即时渲染使得你写Markdown就想是写Word文档一样流畅自如，不像其他编辑器的有编辑栏和显示栏。
+
+Typora删除了预览窗口，以及所有其他不必要的干扰。取而代之的是实时预览。
+Markdown的语法因不同的解析器或编辑器而异，Typora使用的是GitHub Flavored Markdown。
+
+Markdown介绍Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。　　
+Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。
+Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。
+Markdown 编写的文档后缀为 .md, .markdown。
+常用快捷键
+加粗： Ctrl + B
+标题： Ctrl + H
+插入链接： Ctrl + K
+插入代码： Ctrl + Shift + C – 无法执行
+行内代码： Ctrl + Shift + K
+ ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LYZ</div><div class="author-info__description">CS</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lyz-star"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/lyz-star" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lyz3568@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog that is using for CS learning record.</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/09/21/hello-world/" title="Hello World"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2021/09/21/hello-world/" title="Hello World">Hello World</a><time datetime="2021-09-21T10:39:48.102Z" title="Created 2021-09-21 18:39:48">2021-09-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/20/MySQL%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/" title="MySQL常见存储引擎"><img src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL常见存储引擎"/></a><div class="content"><a class="title" href="/2021/09/20/MySQL%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/" title="MySQL常见存储引擎">MySQL常见存储引擎</a><time datetime="2021-09-20T11:50:32.000Z" title="Created 2021-09-20 19:50:32">2021-09-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/19/MySQL%E5%87%BD%E6%95%B0/" title="MySQL函数"><img src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL函数"/></a><div class="content"><a class="title" href="/2021/09/19/MySQL%E5%87%BD%E6%95%B0/" title="MySQL函数">MySQL函数</a><time datetime="2021-09-19T13:49:00.000Z" title="Created 2021-09-19 21:49:00">2021-09-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/19/MySQL%E8%BF%90%E7%AE%97%E7%AC%A6/" title="MySQL运算符"><img src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL运算符"/></a><div class="content"><a class="title" href="/2021/09/19/MySQL%E8%BF%90%E7%AE%97%E7%AC%A6/" title="MySQL运算符">MySQL运算符</a><time datetime="2021-09-19T13:28:30.000Z" title="Created 2021-09-19 21:28:30">2021-09-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/09/19/MySQL%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="MySQL的数据类型"><img src="/img/MySQL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL的数据类型"/></a><div class="content"><a class="title" href="/2021/09/19/MySQL%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" title="MySQL的数据类型">MySQL的数据类型</a><time datetime="2021-09-19T04:31:06.000Z" title="Created 2021-09-19 12:31:06">2021-09-19</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/MySQL/"><span class="card-category-list-name">MySQL</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/tools/"><span class="card-category-list-name">tools</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/"><span class="card-category-list-name">杂项</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/MarkDown/" style="font-size: 1.1em; color: #999">MarkDown</a> <a href="/tags/MySQL/" style="font-size: 1.5em; color: #99a9bf">MySQL</a> <a href="/tags/Tomcat/" style="font-size: 1.1em; color: #999">Tomcat</a> <a href="/tags/Typora/" style="font-size: 1.1em; color: #999">Typora</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">September 2021</span><span class="card-archive-list-count">10</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-09-21T10:47:37.452Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By LYZ</div></div><!--  if theme.footer.copyright--><!--    .framework-info--><!--      span= _p('footer.framework') + ' '--><!--      a(href='#')= 'LYZ'--><!--      span.footer-separator |--><!--      span= _p('footer.theme') + ' '--><!--      a(href='#')= 'Butterfly'--><!--  if theme.footer.custom_text--><!--    .footer_custom_text!=`${theme.footer.custom_text}`--></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    var typed = new Typed("#subtitle", {
+      strings: "人但有恒，事无不成。,温故而知新，可以为师矣。,天将降大任于斯人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，曾益其所不能。,时间是世界上的一切成就的土壤。时间给空想者痛苦，给创造者幸福。,拿回本应属于我的那一切。".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '人但有恒，事无不成。'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
