@@ -777,21 +777,58 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/09/21/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>ubuntu使用deepinwine</title>
+    <url>/2021/09/22/ubuntu%E4%BD%BF%E7%94%A8deepinwine/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O- https://deepin-wine.i-m.dev/setup.sh | sh</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="在终端中使用命令，添加软件仓库并自动刷新缓存"><a href="#在终端中使用命令，添加软件仓库并自动刷新缓存" class="headerlink" title="在终端中使用命令，添加软件仓库并自动刷新缓存"></a>在终端中使用命令，添加软件仓库并自动刷新缓存</h3><p>[]: <a href="https://deepin-wine.i-m.dev/">https://deepin-wine.i-m.dev/</a>    “deepin-wine”</p>
+<h3 id="setup-sh"><a href="#setup-sh" class="headerlink" title="setup.sh"></a>setup.sh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加架构</span></span><br><span class="line">ARCHITECTURE=$(dpkg --print-architecture &amp;&amp; dpkg --print-foreign-architectures)</span><br><span class="line"><span class="keyword">if</span> ! <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$ARCHITECTURE</span>&quot;</span> | grep -qE <span class="string">&#x27;amd64|i386&#x27;</span>; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;必须amd64/i386机型才能移植deepin-wine&quot;</span></span><br><span class="line">    <span class="built_in">return</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$ARCHITECTURE</span>&quot;</span> | grep -qE <span class="string">&#x27;i386&#x27;</span> || sudo dpkg --add-architecture i386</span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">LIST_FILE=<span class="string">&quot;/etc/apt/sources.list.d/deepin-wine.i-m.dev.list&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加软件源</span></span><br><span class="line">sudo tee <span class="string">&quot;<span class="variable">$LIST_FILE</span>&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">deb [trusted=yes] https://deepin-wine.i-m.dev /</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置优先级</span></span><br><span class="line">sudo tee <span class="string">&quot;/etc/apt/preferences.d/deepin-wine.i-m.dev.pref&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">Package: *</span><br><span class="line">Pin: release l=deepin-wine</span><br><span class="line">Pin-Priority: 200</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加XDG_DATA_DIRS配置，使得应用图标能正常显示</span></span><br><span class="line">sudo tee <span class="string">&quot;/etc/profile.d/deepin-wine.i-m.dev.sh&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">XDG_DATA_DIRS=<span class="variable">$&#123;XDG_DATA_DIRS:-/usr/local/share:/usr/share&#125;</span></span><br><span class="line"><span class="keyword">for</span> deepin_dir <span class="keyword">in</span> /opt/apps/*/entries; <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [ -d <span class="string">&quot;<span class="variable">$deepin_dir</span>/applications&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        XDG_DATA_DIRS=<span class="string">&quot;<span class="variable">$XDG_DATA_DIRS</span>:<span class="variable">$deepin_dir</span>&quot;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">export</span> XDG_DATA_DIRS</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新软件源</span></span><br><span class="line">sudo apt-get update --no-list-cleanup -o Dir::Etc::sourcelist=<span class="string">&quot;<span class="variable">$LIST_FILE</span>&quot;</span> -o Dir::Etc::sourceparts=<span class="string">&quot;-&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span> <span class="string">&quot;</span></span><br><span class="line"><span class="string">\033[32m大功告成，现在可以试试安装更新deepin-wine软件了，如：</span></span><br><span class="line"><span class="string">微信：sudo apt-get install com.qq.weixin.deepin</span></span><br><span class="line"><span class="string">QQ：sudo apt-get install com.qq.im.deepin</span></span><br><span class="line"><span class="string">TIM：sudo apt-get install com.qq.office.deepin</span></span><br><span class="line"><span class="string">钉钉：sudo apt-get install com.dingtalk.deepin</span></span><br><span class="line"><span class="string">完整列表见 https://deepin-wine.i-m.dev/</span></span><br><span class="line"><span class="string">\033[31;1m</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 尽量将main restricted universe multiverse这几个系统源都启用（自行百度），免得依赖问题多。</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 安装后需要注销重登录才能显示应用图标。</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 出了问题？先去github主页看README，再看别人提过的issue，再百度搜搜，避免直接就提issue。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">\033[36;1m如果觉得有用，不妨来给项目加个star：\033[25mhttps://github.com/zq1997/deepin-wine</span></span><br><span class="line"><span class="string">\033[0m&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="使用-deepinwine-安装企业微信后无法查看图片-头像的解决方法"><a href="#使用-deepinwine-安装企业微信后无法查看图片-头像的解决方法" class="headerlink" title="使用 deepinwine 安装企业微信后无法查看图片/头像的解决方法"></a>使用 deepinwine 安装企业微信后无法查看图片/头像的解决方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install libjpeg62:i386</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Ubuntu-Packages-Search"><a href="#Ubuntu-Packages-Search" class="headerlink" title="Ubuntu Packages Search"></a>Ubuntu Packages Search</h3><p>[]: <a href="https://packages.ubuntu.com/">https://packages.ubuntu.com/</a>    “Packages Search”</p>
+<h3 id="RTL8723BE无线网卡驱动掉线"><a href="#RTL8723BE无线网卡驱动掉线" class="headerlink" title="RTL8723BE无线网卡驱动掉线"></a>RTL8723BE无线网卡驱动掉线</h3><p>转载：<a href="https://blog.csdn.net/chenhao0428/article/details/51885805?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link">https://blog.csdn.net/chenhao0428/article/details/51885805?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link</a></p>
+<p>  Google上搜索Linux和RTL8723BE这两个关键词会找到网友的大量吐槽，想必同样使用Linux和RTL8723BE的你会感同身受，现将我遇到过的问题及解决方法记录一下（前人埋坑，后人防踩……）：</p>
+<p>一、安装问题：</p>
+<pre><code>   sudo apt-get install linux-headers-generic build-essential git
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+   git clone https://github.com/lwfinger/rtlwifi_new
+
+   cd rtlwifi_new
+
+   sudo make install
+
+   sudo modprobe rtl8723be
+</code></pre>
+<p>二、无线信号太弱的问题：</p>
+<pre><code>   这个问题的原因在于天线信号强度ant_sel有三个设置等级0,1,2，强度依次递增，默认是0所以最弱！！！
+
+   sudo vim /etc/modprobe.d/rtl8723be.conf
+
+   在该文件添加一句：
+
+   options rtl8723be ant_sel=2
+</code></pre>
+<p>三、无线不稳定容易掉线的问题：</p>
+<pre><code>   这个问题的原因在于它的节能休眠机制。
+
+   sudo vim /etc/modprobe.d/rtl8723be.conf
+
+   在该文件添加以下语句：
+
+   options rtl8723be ips=0
+
+   options rtl8723be fwlps=0
+
+   options rtl8723be swenc=1
+</code></pre>
 ]]></content>
+      <categories>
+        <category>ubuntu</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>deepin-wine</tag>
+      </tags>
   </entry>
 </search>
