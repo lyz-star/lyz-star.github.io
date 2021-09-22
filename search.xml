@@ -176,6 +176,56 @@
       </tags>
   </entry>
   <entry>
+    <title>啥是SQL</title>
+    <url>/2021/09/18/%E5%95%A5%E6%98%AFSQL/</url>
+    <content><![CDATA[<h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1    数据库"></a>1.1    数据库</h3><p>​            数据库就是一个文件柜，用于存放数据。</p>
+<blockquote>
+<p>数据库（database）<br>保存有组织的数据的容器（通常是一个文件或一组文件）。</p>
+</blockquote>
+<h3 id="1-2-表"><a href="#1-2-表" class="headerlink" title="1.2    表"></a>1.2    表</h3><p>​            当我们往文件柜中存放资料时，并非随手乱扔。而是有特定的结构。我们会创建一个表。</p>
+<blockquote>
+<p>表（table）<br>某种特定类型数据的结构化清单。</p>
+</blockquote>
+<p>​            通常我们在同一张表中存放的是同一种类型的数据。比方说我们不应该将用户数据和购买记录放在同一张表中。并且表的名字在同一个数据库中是唯一的。</p>
+<p>​            表具有一定的结构。表的结构定义的表中的数据会如何存储，存储什么样的数据，数据如何被分解。用来描述表的信息就是模式。</p>
+<blockquote>
+<p>模式（schema）<br>关于数据库和表的布局结构的信息。</p>
+</blockquote>
+<h3 id="1-3-列"><a href="#1-3-列" class="headerlink" title="1.3    列"></a>1.3    列</h3><p>​            表是由不同的列组成的。列存储表中的某一部分的信息（字段）。</p>
+<blockquote>
+<p>列（column）</p>
+<p>表中的字段。表一般是由多个列组成的。每一列存储字段定义的信息。等同于表格中的列。</p>
+</blockquote>
+<p>​            正确的将数据分解十分必要。例如，姓名，年龄，地址等都应该是独立的列。通过他们独立的列，在进行数据分类过滤将非常有帮助。在实际应用中要根据情况合理的分割数据。</p>
+<blockquote>
+<p>列中的数据要注意他的数据类型兼容。每个列都有他自己的数据类型。</p>
+</blockquote>
+<h3 id="1-4-行"><a href="#1-4-行" class="headerlink" title="1.4    行"></a>1.4    行</h3><p>​            表格中的数据是按照行存储的。一行数据为相关联的一组数据。</p>
+<h3 id="1-5-主键"><a href="#1-5-主键" class="headerlink" title="1.5    主键"></a>1.5    主键</h3><p>​            表中的一行数据用于唯一标识的字段，即可作为主键存在。例如身份证号码，订单id号码。</p>
+<blockquote>
+<p>主键（primary key）<br>能够<strong>唯一</strong>标识表中每一行。</p>
+<p>虽然并不总是需要主键，但多数数据库设计者都会保证他们创建的每表具有一个主键，以便于以后的数据操作和管理。</p>
+</blockquote>
+<h3 id="1-6-什么是SQL"><a href="#1-6-什么是SQL" class="headerlink" title="1.6    什么是SQL"></a>1.6    什么是SQL</h3><blockquote>
+<p>SQL是 Structured Query Language（结构化查询语言）的缩写。SQL是一种专门用来与数据库沟通的语言。</p>
+</blockquote>
+<blockquote>
+<p>SQL有如下的优点：</p>
+<ul>
+<li>SQL不是某个特定数据库供应商专有的语言。几乎所有重要的 DBMS都支持 SQL，所以学习此语言使你几乎能与所有数据库打交道。</li>
+<li>SQL简单易学。它的语句全都是由有很强描述性的英语单词组成，而且这些单词的数目不多。</li>
+<li>SQL虽然看上去很简单，但实际上是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库操作。</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL入门</title>
     <url>/2021/09/18/MySQL%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h3 id="SQL-分类"><a href="#SQL-分类" class="headerlink" title="SQL 分类"></a>SQL 分类</h3><p>​    SQL 语句主要可以划分为以下 3 个类别。</p>
@@ -294,56 +344,6 @@
       </tags>
   </entry>
   <entry>
-    <title>啥是SQL</title>
-    <url>/2021/09/18/%E5%95%A5%E6%98%AFSQL/</url>
-    <content><![CDATA[<h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1    数据库"></a>1.1    数据库</h3><p>​            数据库就是一个文件柜，用于存放数据。</p>
-<blockquote>
-<p>数据库（database）<br>保存有组织的数据的容器（通常是一个文件或一组文件）。</p>
-</blockquote>
-<h3 id="1-2-表"><a href="#1-2-表" class="headerlink" title="1.2    表"></a>1.2    表</h3><p>​            当我们往文件柜中存放资料时，并非随手乱扔。而是有特定的结构。我们会创建一个表。</p>
-<blockquote>
-<p>表（table）<br>某种特定类型数据的结构化清单。</p>
-</blockquote>
-<p>​            通常我们在同一张表中存放的是同一种类型的数据。比方说我们不应该将用户数据和购买记录放在同一张表中。并且表的名字在同一个数据库中是唯一的。</p>
-<p>​            表具有一定的结构。表的结构定义的表中的数据会如何存储，存储什么样的数据，数据如何被分解。用来描述表的信息就是模式。</p>
-<blockquote>
-<p>模式（schema）<br>关于数据库和表的布局结构的信息。</p>
-</blockquote>
-<h3 id="1-3-列"><a href="#1-3-列" class="headerlink" title="1.3    列"></a>1.3    列</h3><p>​            表是由不同的列组成的。列存储表中的某一部分的信息（字段）。</p>
-<blockquote>
-<p>列（column）</p>
-<p>表中的字段。表一般是由多个列组成的。每一列存储字段定义的信息。等同于表格中的列。</p>
-</blockquote>
-<p>​            正确的将数据分解十分必要。例如，姓名，年龄，地址等都应该是独立的列。通过他们独立的列，在进行数据分类过滤将非常有帮助。在实际应用中要根据情况合理的分割数据。</p>
-<blockquote>
-<p>列中的数据要注意他的数据类型兼容。每个列都有他自己的数据类型。</p>
-</blockquote>
-<h3 id="1-4-行"><a href="#1-4-行" class="headerlink" title="1.4    行"></a>1.4    行</h3><p>​            表格中的数据是按照行存储的。一行数据为相关联的一组数据。</p>
-<h3 id="1-5-主键"><a href="#1-5-主键" class="headerlink" title="1.5    主键"></a>1.5    主键</h3><p>​            表中的一行数据用于唯一标识的字段，即可作为主键存在。例如身份证号码，订单id号码。</p>
-<blockquote>
-<p>主键（primary key）<br>能够<strong>唯一</strong>标识表中每一行。</p>
-<p>虽然并不总是需要主键，但多数数据库设计者都会保证他们创建的每表具有一个主键，以便于以后的数据操作和管理。</p>
-</blockquote>
-<h3 id="1-6-什么是SQL"><a href="#1-6-什么是SQL" class="headerlink" title="1.6    什么是SQL"></a>1.6    什么是SQL</h3><blockquote>
-<p>SQL是 Structured Query Language（结构化查询语言）的缩写。SQL是一种专门用来与数据库沟通的语言。</p>
-</blockquote>
-<blockquote>
-<p>SQL有如下的优点：</p>
-<ul>
-<li>SQL不是某个特定数据库供应商专有的语言。几乎所有重要的 DBMS都支持 SQL，所以学习此语言使你几乎能与所有数据库打交道。</li>
-<li>SQL简单易学。它的语句全都是由有很强描述性的英语单词组成，而且这些单词的数目不多。</li>
-<li>SQL虽然看上去很简单，但实际上是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库操作。</li>
-</ul>
-</blockquote>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据检索</title>
     <url>/2021/09/18/%E6%95%B0%E6%8D%AE%E6%A3%80%E7%B4%A2/</url>
     <content><![CDATA[<h3 id="2-1-select初步"><a href="#2-1-select初步" class="headerlink" title="2.1    select初步"></a>2.1    select初步</h3><h4 id="1-从表中选取数据。"><a href="#1-从表中选取数据。" class="headerlink" title="1.从表中选取数据。"></a>1.从表中选取数据。</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> name <span class="keyword">from</span> users;  #从users表中选取name列</span><br></pre></td></tr></table></figure>
@@ -374,6 +374,42 @@
 
 
 </blockquote>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL常见存储引擎</title>
+    <url>/2021/09/20/MySQL%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/</url>
+    <content><![CDATA[<h3 id="查看当前版本支持的存储引擎"><a href="#查看当前版本支持的存储引擎" class="headerlink" title="查看当前版本支持的存储引擎"></a>查看当前版本支持的存储引擎</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">show</span> engines;</span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="operator">|</span>Engine	<span class="operator">|</span>Support	<span class="operator">|</span>Comment	<span class="operator">|</span>Transactions	<span class="operator">|</span>XA	<span class="operator">|</span>Savepoints<span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="operator">|</span>ARCHIVE	<span class="operator">|</span>YES	<span class="operator">|</span>Archivestorageengine	<span class="operator">|</span><span class="keyword">NO</span>	<span class="operator">|</span><span class="keyword">NO</span>	<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>BLACKHOLE	<span class="operator">|</span>YES	<span class="operator">|</span><span class="operator">/</span>dev<span class="operator">/</span>nullstorageengine(anythingyouwritetoitdisappears)<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MRG_MYISAM	<span class="operator">|</span>YES	<span class="operator">|</span>CollectionofidenticalMyISAMtables<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>FEDERATED	<span class="operator">|</span><span class="keyword">NO</span>		<span class="operator">|</span>FederatedMySQLstorageengine<span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MyISAM		<span class="operator">|</span>YES	<span class="operator">|</span>MyISAMstorageengine<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>PERFORMANCE_SCHEMA<span class="operator">|</span>YES<span class="operator">|</span>PerformanceSchema<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>InnoDB<span class="operator">|</span>	<span class="keyword">DEFAULT</span>	<span class="operator">|</span>Supportstransactions,<span class="type">row</span><span class="operator">-</span>levellocking,andforeignkeys<span class="operator">|</span>YES<span class="operator">|</span>YES<span class="operator">|</span>YES<span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MEMORY		<span class="operator">|</span>YES	<span class="operator">|</span>Hashbased,storedinmemory,usefulfortemporarytables<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>CSV		<span class="operator">|</span>YES	<span class="operator">|</span>CSVstorageengine<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="number">9</span>rowsinset(<span class="number">0.00</span>sec)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="QQ%E5%9B%BE%E7%89%8720210920195642.png"></p>
+<h2 id="InnoDB"><a href="#InnoDB" class="headerlink" title="InnoDB"></a>InnoDB</h2><p>​            InnoDB 存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比 MyISAM的存储引擎，InnoDB 写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。<br>下面将重点介绍 InnoDB 存储引擎的表使用过程中不同于其他存储引擎的特点。</p>
+<h4 id="1、自动增长列"><a href="#1、自动增长列" class="headerlink" title="1、自动增长列"></a>1、自动增长列</h4><p>​            InnoDB 表的自动增长列可以手工插入，但是插入的值如果是空或者 0，则实际插入的将是自动增长后的值。<br>​            </p>
+<blockquote>
+<p>可以通过“ALTER TABLE *** AUTO_INCREMENT = n;”语句强制设置自动增长列的初识值，默认从 1 开始，但是该强制的默认值是保留在内存中的，如果该值在使用之前数据库重新启动，那么这个强制的默认值就会丢失，就需要在数据库启动以后重新设置。</p>
+</blockquote>
+<pre><code>        对于 InnoDB 表，**自动增长列必须是索引**。
+</code></pre>
+<h4 id="2、外键约束"><a href="#2、外键约束" class="headerlink" title="2、外键约束"></a>2、外键约束</h4><p>​            MySQL 支持外键的存储引擎只有 InnoDB，在创建外键的时候，要求父表必须有对应的索引，子表在创建外键的时候也会自动创建对应的索引。<br>​            下面是样例数据库中的两个表，country 表是父表，country_id 为主键索引，city 表是子表，country_id 字段对 country 表的 country_id 有外键。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> country (</span><br><span class="line">country_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">country <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">last_update <span class="type">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line"><span class="keyword">PRIMARY</span> KEY (country_id)</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> city (</span><br><span class="line">city_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">city <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">country_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">last_update <span class="type">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line"><span class="keyword">PRIMARY</span> KEY (city_id),</span><br><span class="line">KEY idx_fk_country_id (country_id),</span><br><span class="line"><span class="keyword">CONSTRAINT</span> `fk_city_country` <span class="keyword">FOREIGN</span> KEY (country_id) <span class="keyword">REFERENCES</span> country (country_id) <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DELETE</span> RESTRICT <span class="keyword">ON</span> UPDATE CASCADE</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当某个表被其他表创建了外键参照，那么该表的对应索引或者主键禁止被删除。</p>
+</blockquote>
+<blockquote>
+<p>​        在导入多个表的数据时，如果需要忽略表之前的导入顺序，可以暂时关闭外键的检查；同样，在执行 LOAD DATA 和 ALTER TABLE 操作的时候，可以通过暂时关闭外键约束来加快处理的速度，关闭的命令是“SET FOREIGN_KEY_CHECKS = 0;”，执行完成之后，通过执行“SET FOREIGN_KEY_CHECKS = 1;”语句改回原状态。</p>
+</blockquote>
+<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><ul>
+<li>MyISAM：插件式存储引擎。如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常适合的。MyISAM 是在 Web、数据仓储和其他应用环境下最常使用的存储引擎之一。</li>
+<li>InnoDB：用于事务处理应用程序，支持外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操作除了插入和查询以外，还包括很多的更新、删除操作，那么 InnoDB 存储引擎应该是比较合适的选择。InnoDB 存储引擎除了有效地降低由于删除和更新导致的锁定，还可以确保事务的完整提交（Commit）和回滚（Rollback），对于类似计费系统或者财务系统等对数据准确性要求比较高的系统，InnoDB 都是合适的选<br>择。</li>
+<li>MEMORY：将所有数据保存在 RAM 中，在需要快速定位记录和其他类似数据的环境下，可提供极快的访问MEMORY 的缺陷是对表的大小有限制，太大的表无法 CACHE 在内存中，其次是要确保表的数据可以恢复，数据库异常终止后表中的数据是可以恢复的。MEMORY 表通常用于更新不太频繁的小表，用以快速得到访问结果</li>
+<li>MERGE：用于将一系列等同的 MyISAM 表以逻辑方式组合在一起，并作为一个对象引用它们。MERGE 表的优点在于可以突破对单个 MyISAM 表大小的限制，并且通过将不同的表分布在多个磁盘上，可以有效地改善 MERGE 表的访问效率。这对于诸如数据仓储等 VLDB环境十分适合。</li>
+</ul>
 ]]></content>
       <categories>
         <category>MySQL</category>
@@ -645,42 +681,6 @@
 </ol>
 <p>详细略</p>
 <h2 id="MySQL运算符优先级"><a href="#MySQL运算符优先级" class="headerlink" title="MySQL运算符优先级"></a>MySQL运算符优先级</h2><p><img src="QQ%E5%9B%BE%E7%89%8720210919214623.png"></p>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL常见存储引擎</title>
-    <url>/2021/09/20/MySQL%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/</url>
-    <content><![CDATA[<h3 id="查看当前版本支持的存储引擎"><a href="#查看当前版本支持的存储引擎" class="headerlink" title="查看当前版本支持的存储引擎"></a>查看当前版本支持的存储引擎</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">show</span> engines;</span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="operator">|</span>Engine	<span class="operator">|</span>Support	<span class="operator">|</span>Comment	<span class="operator">|</span>Transactions	<span class="operator">|</span>XA	<span class="operator">|</span>Savepoints<span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="operator">|</span>ARCHIVE	<span class="operator">|</span>YES	<span class="operator">|</span>Archivestorageengine	<span class="operator">|</span><span class="keyword">NO</span>	<span class="operator">|</span><span class="keyword">NO</span>	<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>BLACKHOLE	<span class="operator">|</span>YES	<span class="operator">|</span><span class="operator">/</span>dev<span class="operator">/</span>nullstorageengine(anythingyouwritetoitdisappears)<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MRG_MYISAM	<span class="operator">|</span>YES	<span class="operator">|</span>CollectionofidenticalMyISAMtables<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>FEDERATED	<span class="operator">|</span><span class="keyword">NO</span>		<span class="operator">|</span>FederatedMySQLstorageengine<span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MyISAM		<span class="operator">|</span>YES	<span class="operator">|</span>MyISAMstorageengine<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>PERFORMANCE_SCHEMA<span class="operator">|</span>YES<span class="operator">|</span>PerformanceSchema<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>InnoDB<span class="operator">|</span>	<span class="keyword">DEFAULT</span>	<span class="operator">|</span>Supportstransactions,<span class="type">row</span><span class="operator">-</span>levellocking,andforeignkeys<span class="operator">|</span>YES<span class="operator">|</span>YES<span class="operator">|</span>YES<span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MEMORY		<span class="operator">|</span>YES	<span class="operator">|</span>Hashbased,storedinmemory,usefulfortemporarytables<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>CSV		<span class="operator">|</span>YES	<span class="operator">|</span>CSVstorageengine<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="number">9</span>rowsinset(<span class="number">0.00</span>sec)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="QQ%E5%9B%BE%E7%89%8720210920195642.png"></p>
-<h2 id="InnoDB"><a href="#InnoDB" class="headerlink" title="InnoDB"></a>InnoDB</h2><p>​            InnoDB 存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比 MyISAM的存储引擎，InnoDB 写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。<br>下面将重点介绍 InnoDB 存储引擎的表使用过程中不同于其他存储引擎的特点。</p>
-<h4 id="1、自动增长列"><a href="#1、自动增长列" class="headerlink" title="1、自动增长列"></a>1、自动增长列</h4><p>​            InnoDB 表的自动增长列可以手工插入，但是插入的值如果是空或者 0，则实际插入的将是自动增长后的值。<br>​            </p>
-<blockquote>
-<p>可以通过“ALTER TABLE *** AUTO_INCREMENT = n;”语句强制设置自动增长列的初识值，默认从 1 开始，但是该强制的默认值是保留在内存中的，如果该值在使用之前数据库重新启动，那么这个强制的默认值就会丢失，就需要在数据库启动以后重新设置。</p>
-</blockquote>
-<pre><code>        对于 InnoDB 表，**自动增长列必须是索引**。
-</code></pre>
-<h4 id="2、外键约束"><a href="#2、外键约束" class="headerlink" title="2、外键约束"></a>2、外键约束</h4><p>​            MySQL 支持外键的存储引擎只有 InnoDB，在创建外键的时候，要求父表必须有对应的索引，子表在创建外键的时候也会自动创建对应的索引。<br>​            下面是样例数据库中的两个表，country 表是父表，country_id 为主键索引，city 表是子表，country_id 字段对 country 表的 country_id 有外键。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> country (</span><br><span class="line">country_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">country <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">last_update <span class="type">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line"><span class="keyword">PRIMARY</span> KEY (country_id)</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> city (</span><br><span class="line">city_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">city <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">country_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">last_update <span class="type">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line"><span class="keyword">PRIMARY</span> KEY (city_id),</span><br><span class="line">KEY idx_fk_country_id (country_id),</span><br><span class="line"><span class="keyword">CONSTRAINT</span> `fk_city_country` <span class="keyword">FOREIGN</span> KEY (country_id) <span class="keyword">REFERENCES</span> country (country_id) <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DELETE</span> RESTRICT <span class="keyword">ON</span> UPDATE CASCADE</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>当某个表被其他表创建了外键参照，那么该表的对应索引或者主键禁止被删除。</p>
-</blockquote>
-<blockquote>
-<p>​        在导入多个表的数据时，如果需要忽略表之前的导入顺序，可以暂时关闭外键的检查；同样，在执行 LOAD DATA 和 ALTER TABLE 操作的时候，可以通过暂时关闭外键约束来加快处理的速度，关闭的命令是“SET FOREIGN_KEY_CHECKS = 0;”，执行完成之后，通过执行“SET FOREIGN_KEY_CHECKS = 1;”语句改回原状态。</p>
-</blockquote>
-<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><ul>
-<li>MyISAM：插件式存储引擎。如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常适合的。MyISAM 是在 Web、数据仓储和其他应用环境下最常使用的存储引擎之一。</li>
-<li>InnoDB：用于事务处理应用程序，支持外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操作除了插入和查询以外，还包括很多的更新、删除操作，那么 InnoDB 存储引擎应该是比较合适的选择。InnoDB 存储引擎除了有效地降低由于删除和更新导致的锁定，还可以确保事务的完整提交（Commit）和回滚（Rollback），对于类似计费系统或者财务系统等对数据准确性要求比较高的系统，InnoDB 都是合适的选<br>择。</li>
-<li>MEMORY：将所有数据保存在 RAM 中，在需要快速定位记录和其他类似数据的环境下，可提供极快的访问MEMORY 的缺陷是对表的大小有限制，太大的表无法 CACHE 在内存中，其次是要确保表的数据可以恢复，数据库异常终止后表中的数据是可以恢复的。MEMORY 表通常用于更新不太频繁的小表，用以快速得到访问结果</li>
-<li>MERGE：用于将一系列等同的 MyISAM 表以逻辑方式组合在一起，并作为一个对象引用它们。MERGE 表的优点在于可以突破对单个 MyISAM 表大小的限制，并且通过将不同的表分布在多个磁盘上，可以有效地改善 MERGE 表的访问效率。这对于诸如数据仓储等 VLDB环境十分适合。</li>
-</ul>
 ]]></content>
       <categories>
         <category>MySQL</category>
