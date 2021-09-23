@@ -831,4 +831,34 @@
         <tag>deepin-wine</tag>
       </tags>
   </entry>
+  <entry>
+    <title>vmware在manjaro上的问题</title>
+    <url>/2021/09/23/vmware%E5%9C%A8manjaro%E4%B8%8A%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h3 id="Manjaro-Linux-kernel-headers-installation-vmware提示需要linux-kernel-headers"><a href="#Manjaro-Linux-kernel-headers-installation-vmware提示需要linux-kernel-headers" class="headerlink" title="Manjaro Linux kernel headers installation (vmware提示需要linux kernel headers)"></a>Manjaro Linux kernel headers installation (vmware提示需要linux kernel headers)</h3><p>[]: <a href="https://linuxconfig.org/manjaro-linux-kernel-headers-installation">https://linuxconfig.org/manjaro-linux-kernel-headers-installation</a></p>
+<p>检查系统内的内核头</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pacman -Q | grep headers</span><br><span class="line">uname -r</span><br></pre></td></tr></table></figure>
+
+<p>安装内核头</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo pacman -S linux-headers    <span class="comment">#选择上面检查出的内核头版本安装</span></span><br></pre></td></tr></table></figure>
+
+<p>重启电脑就可生效</p>
+<h3 id="Vmware-Unable-to-install-all-modules-不能够编译安装vmmon和vmnet"><a href="#Vmware-Unable-to-install-all-modules-不能够编译安装vmmon和vmnet" class="headerlink" title="Vmware Unable to install all modules,不能够编译安装vmmon和vmnet"></a>Vmware Unable to install all modules,不能够编译安装vmmon和vmnet</h3><p>手动安装两个模块</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">I had to install the sys-kernel/linux-headers to be able to build vmmon-only and vmnet-only modules (because these two were not working at all).</span><br><span class="line">To install modules, simply run make and make install as root. It will replace modules initially installed by the vmware installer.</span><br><span class="line"></span><br><span class="line">Summary of all commands :</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/mkubecek/vmware-host-modules.git</span><br><span class="line"><span class="built_in">cd</span> vmware-host-modules</span><br><span class="line">git checkout workstation-15.5.1</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<h3 id="VMWare-Could-not-connect-‘Ethernet0‘-to-virtual-network-‘-dev-vmnet0‘"><a href="#VMWare-Could-not-connect-‘Ethernet0‘-to-virtual-network-‘-dev-vmnet0‘" class="headerlink" title="VMWare - Could not connect ‘Ethernet0‘ to virtual network ‘/dev/vmnet0‘."></a>VMWare - Could not connect ‘Ethernet0‘ to virtual network ‘/dev/vmnet0‘.</h3><p>手动启动两个服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo modprobe vmnet &amp;&amp; sudo vmware-networks --start</span><br><span class="line">sudo systemctl start vmware-networks.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="Could-not-open-dev-vmmon-Please-make-sure-that-the-kernel-module-vmmon-is-loaded"><a href="#Could-not-open-dev-vmmon-Please-make-sure-that-the-kernel-module-vmmon-is-loaded" class="headerlink" title="Could not open /dev/vmmon: ?????????. Please make sure that the kernel module vmmon is loaded"></a>Could not open /dev/vmmon: ?????????. Please make sure that the kernel module vmmon is loaded</h3><p>在安装好内核头以后。手动启用相关模块</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo modprobe -a vmw_vmci vmmon</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>manjaro</category>
+      </categories>
+      <tags>
+        <tag>vmware</tag>
+        <tag>manjaro</tag>
+        <tag>archlinux</tag>
+      </tags>
+  </entry>
 </search>
