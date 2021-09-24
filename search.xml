@@ -861,4 +861,20 @@
         <tag>archlinux</tag>
       </tags>
   </entry>
+  <entry>
+    <title>mysql问题合集</title>
+    <url>/2021/09/24/mysql%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<h3 id="1-此版本mysql不支持limit子句"><a href="#1-此版本mysql不支持limit子句" class="headerlink" title="1.    此版本mysql不支持limit子句"></a>1.    此版本mysql不支持limit子句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update tbl_emp <span class="keyword">set</span> department_id<span class="operator">=</span><span class="number">1</span> <span class="keyword">where</span> emp_id <span class="keyword">in</span> </span><br><span class="line">	(<span class="keyword">SELECT</span> emp_id <span class="keyword">FROM</span> `tbl_emp` limit <span class="number">10</span>)</span><br><span class="line"><span class="operator">&gt;</span> <span class="number">1235</span> <span class="operator">-</span> This version <span class="keyword">of</span> MySQL doesn<span class="string">&#x27;t yet support &#x27;</span>LIMIT <span class="operator">&amp;</span> <span class="keyword">IN</span><span class="operator">/</span><span class="keyword">ALL</span><span class="operator">/</span><span class="keyword">ANY</span><span class="operator">/</span><span class="keyword">SOME</span> subquery<span class="string">&#x27;</span></span><br><span class="line"><span class="string">&gt; 时间: 0.046s</span></span><br></pre></td></tr></table></figure>
+
+<p>解决方案很简单。套一层语句就好了</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update tbl_emp <span class="keyword">set</span> department_id<span class="operator">=</span><span class="number">1</span> </span><br><span class="line"><span class="keyword">where</span> emp_id <span class="keyword">in</span> </span><br><span class="line">	(<span class="keyword">select</span> t.emp_id <span class="keyword">from</span>  </span><br><span class="line"> 		(<span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> `tbl_emp` limit <span class="number">10</span>)</span><br><span class="line">     <span class="keyword">as</span> t)</span><br><span class="line"><span class="operator">&gt;</span> Affected <span class="keyword">rows</span>: <span class="number">10</span></span><br><span class="line"><span class="operator">&gt;</span> 时间: <span class="number">0.055</span>s</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
 </search>
