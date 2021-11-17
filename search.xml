@@ -979,6 +979,8 @@
     <title>windows_kms</title>
     <url>/2021/11/17/windows-kms/</url>
     <content><![CDATA[<p><a href="https://github.com/Wind4/vlmcsd/releases">https://github.com/Wind4/vlmcsd/releases</a><br><a href="https://github.com/dylanbai8/kmspro">https://github.com/dylanbai8/kmspro</a></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">slmgr /upk   <span class="comment">#卸载原密钥</span></span><br><span class="line">slmgr /ipk	XXXX-XXXX-XXXX		<span class="comment">#安装合适的密钥</span></span><br><span class="line">slmgr /skms xxx.xxx 		<span class="comment">#设置密钥服务器</span></span><br><span class="line">slmgr /ato				<span class="comment">#激活</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Windows</category>
