@@ -936,6 +936,21 @@
 <p>容器层之下，皆为镜像层！</p>
 <h4 id="Commit镜像"><a href="#Commit镜像" class="headerlink" title="Commit镜像"></a>Commit镜像</h4><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker commit -m <span class="string">&quot;描述信息&quot;</span> -a <span class="string">&quot;作者&quot;</span> id image_name:tag</span><br></pre></td></tr></table></figure>
 
+<h3 id="容器数据卷"><a href="#容器数据卷" class="headerlink" title="容器数据卷"></a>容器数据卷</h3><p>如果数据都在容器中，当容器被删除的时候，数据就会同时丢失。</p>
+<p>这时，我们就需要使用卷技术。同时可以使用卷技术在容器间共享文件。</p>
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker run -it -v main_path:Docker_path image_name /bin/bash</span><br><span class="line">docker inspect id	<span class="comment">#查看容器信息</span></span><br></pre></td></tr></table></figure>
+
+<p>类似于共享文件夹。</p>
+<h5 id="挂载mysql-mysql的数据持久化问题"><a href="#挂载mysql-mysql的数据持久化问题" class="headerlink" title="挂载mysql(mysql的数据持久化问题)"></a>挂载mysql(mysql的数据持久化问题)</h5><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Docker官方mysql推荐的启动测试</span></span><br><span class="line">docker run --name name -e MYSQL_ROOT_PASSWORD=your_password -d mysql:tag</span><br><span class="line"><span class="comment">#我的启动</span></span><br><span class="line">docker run -d -p 3306:3306 -v /home/mysql/conf:/etc/mysql/conf.d -v /home/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=your_password --name name mysql:tag</span><br></pre></td></tr></table></figure>
+
+<p>直接将容器删除以后，不会影响挂载的卷。以此可以可靠实现数据的持久化。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">1.	docker volume        <span class="comment">#查看挂载卷的信息</span></span><br><span class="line">          -create      Create a volume</span><br><span class="line">          -inspect     Display detailed information on one or more volumes</span><br><span class="line">          -ls          List volumes</span><br><span class="line">          -prune       Remove all unused <span class="built_in">local</span> volumes</span><br><span class="line">          -rm          Remove one or more volumes</span><br><span class="line">2.	docker volume inspect 卷名      <span class="comment">#查看特定卷的信息</span></span><br><span class="line">3.	docker run -d mysql:tag -v 主机路径|卷名:容器路径:ro|rw	<span class="comment">#读写权限</span></span><br><span class="line">如果在挂载卷时没有指定卷名，Docker将会随机命名（匿名挂载）。</span><br><span class="line">挂载卷时指定卷名（具名挂载），则会使用用户定义的名字挂载。</span><br><span class="line">不指定主机挂载目录的卷，均挂载在/var/lib/docker/volumes/xxxx中。</span><br></pre></td></tr></table></figure>
+
+<h3 id="认识DockerFile"><a href="#认识DockerFile" class="headerlink" title="认识DockerFile"></a>认识DockerFile</h3><p>用于构建Docker镜像的构建文件。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -958,6 +973,19 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows_kms</title>
+    <url>/2021/11/17/windows-kms/</url>
+    <content><![CDATA[<p><a href="https://github.com/Wind4/vlmcsd/releases">https://github.com/Wind4/vlmcsd/releases</a><br><a href="https://github.com/dylanbai8/kmspro">https://github.com/dylanbai8/kmspro</a></p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>KMS</tag>
       </tags>
   </entry>
 </search>
