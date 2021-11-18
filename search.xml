@@ -1012,7 +1012,11 @@
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">curl localhost:9090/<span class="built_in">test</span>/</span><br><span class="line">response:</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;Hello World&lt;/title&gt;&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">Hello World!&lt;br/&gt;</span><br><span class="line">Your IP address is 172.17.0.1</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
 <p>测试成功.</p>
-]]></content>
+<h4 id="发布镜像"><a href="#发布镜像" class="headerlink" title="发布镜像"></a>发布镜像</h4><p>hub上注册账号。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">命令： docker login</span><br><span class="line"></span><br><span class="line">​	docker push userid/imagesname:tag</span><br></pre></td></tr></table></figure>
+
+<p><img src="9.png"></p>
+<h3 id="Docker网络"><a href="#Docker网络" class="headerlink" title="Docker网络"></a>Docker网络</h3>]]></content>
       <categories>
         <category>Docker</category>
       </categories>
