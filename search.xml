@@ -1,286 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Typora</title>
-    <url>/2021/09/17/Typora/</url>
-    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Typora是一款轻便简洁的Markdown编辑器，支持即时渲染技术，这也是与其他Markdown编辑器最显著的区别。即时渲染使得你写Markdown就想是写Word文档一样流畅自如，不像其他编辑器的有编辑栏和显示栏。</p>
-<ul>
-<li>Typora删除了预览窗口，以及所有其他不必要的干扰。取而代之的是实时预览。</li>
-<li>Markdown的语法因不同的解析器或编辑器而异，Typora使用的是<a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">GitHub Flavored Markdown</a>。</li>
-</ul>
-<h2 id="Markdown介绍"><a href="#Markdown介绍" class="headerlink" title="Markdown介绍"></a>Markdown介绍</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。　　</p>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-<p>Markdown 编写的文档后缀为 <code>.md</code>, <code>.markdown</code>。</p>
-<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul>
-<li>加粗： <code>Ctrl + B</code></li>
-<li>标题： <code>Ctrl + H</code></li>
-<li>插入链接： <code>Ctrl + K</code></li>
-<li>插入代码： <code>Ctrl + Shift + C</code> – 无法执行</li>
-<li>行内代码： <code>Ctrl + Shift + K</code></li>
-<li>插入图片： <code>Ctrl + Shift + I</code></li>
-<li>无序列表：<code>Ctrl + Shift + L</code> – 无法执行</li>
-<li>撤销： <code>Ctrl + Z</code></li>
-<li>一级标题： <code>Ctrl + 1</code> – 以此类推</li>
-</ul>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">Typora快捷键整合</span><br><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">Ctrl+1  一阶标题    Ctrl+B  字体加粗</span></span><br><span class="line"><span class="string">Ctrl+2  二阶标题    Ctrl+I  字体倾斜</span></span><br><span class="line"><span class="string">Ctrl+3  三阶标题    Ctrl+U  下划线</span></span><br><span class="line"><span class="string">Ctrl+4  四阶标题    Ctrl+Home   返回Typora顶部</span></span><br><span class="line"><span class="string">Ctrl+5  五阶标题    Ctrl+End    返回Typora底部</span></span><br><span class="line"><span class="string">Ctrl+6  六阶标题    Ctrl+T  创建表格</span></span><br><span class="line"><span class="string">Ctrl+L  选中某句话   Ctrl+K  创建超链接</span></span><br><span class="line"><span class="string">Ctrl+D  选中某个单词  Ctrl+F  搜索</span></span><br><span class="line"><span class="string">Ctrl+E  选中相同格式的文字   Ctrl+H  搜索并替换</span></span><br><span class="line"><span class="string">Alt+Shift+5 删除线 Ctrl+Shift+I    插入图片</span></span><br><span class="line"><span class="string">Ctrl+Shift+M    公式块 Ctrl+Shift+Q    引用</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">注：一些实体符号需要在实体符号之前加”\”才能够显示</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h2><h3 id="换行符"><a href="#换行符" class="headerlink" title="换行符"></a>换行符</h3><p>在markdown中，段落由多个空格分隔。在Typora中，只需回车即可创建新段落。</p>
-<h3 id="标题级别"><a href="#标题级别" class="headerlink" title="标题级别"></a>标题级别</h3><p># 一级标题 快捷键为 Ctrl + 1<br>## 二级标题 快捷键为 Ctrl + 2<br>……<br>###### 六级标题 快捷键为 Ctrl + 6</p>
-<h3 id="引用文字"><a href="#引用文字" class="headerlink" title="引用文字"></a>引用文字</h3><p>&gt; + 空格 + 引用文字</p>
-<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用 * + - 都可以创建一个无序列表</p>
-<ul>
-<li>AAA</li>
-<li>BBB</li>
-<li>CCC</li>
-</ul>
-<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用 1. 2. 3. 创建有序列表</p>
-<ol>
-<li>AAA</li>
-<li>BBB</li>
-<li>CCC</li>
-</ol>
-<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>\ -[ ] 不勾选<br>\ -[x] 勾选</p>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>在Typora中插入程序代码的方式有两种：使用反引号 `（~ 键）、使用缩进（Tab）。</p>
-<ul>
-<li>插入行内代码，即插入一个单词或者一句代码的情况，使用 <code>code</code> 这样的形式插入。</li>
-<li>插入多行代码输入3个反引号（`） + 回车，并在后面选择一个语言名称即可实现语法高亮。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">helloworld</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;hello, world!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h3><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。根据需要加载 Mathjax 对数学公式进行渲染。</p>
-<p>按下 <code>$$</code>，然后按下回车键，即可进行数学公式的编辑。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1\times\mathbf&#123;V&#125;_2 = \mathbf&#123;X&#125;_3</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-
-<h3 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h3><p>输入 <code>| 表头1 | 表头2 |</code>并回车。即可创建一个包含2列表。快捷键 <code>Ctrl + T</code>弹出对话框。</p>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>number</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<ul>
-<li>不管是哪种方式，第一行为表头，第二行为分割表头和主体部分，第三行开始每一行为一个表格行</li>
-<li>列与列之间用管道符号<code>|</code> 隔开</li>
-<li>还可设置对齐方式(表头与内容之间)，如果不使用对齐标记，内容默认左对齐，表头居中对齐<ul>
-<li>左对齐 ：|</li>
-<li>右对齐 |：</li>
-<li>中对齐 ：|：</li>
-</ul>
-</li>
-<li>为了美观，可以使用空格对齐不同行的单元格，并在左右两侧都使用 | 来标记单元格边界</li>
-<li>为了使 Markdown 更清晰，| 和 - 两侧需要至少有一个空格（最左侧和最右侧的 | 外就不需要了）。</li>
-</ul>
-<h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>这个例子的脚注为[<a href="https://www.cnblogs.com/hider/p/11614688.html#fn1">1]</a>。</p>
-<p>注意：该例子脚注标识是1，脚注标识可以为字母数字下划线，但是暂不支持中文。脚注内容可为任意字符，包括中文。</p>
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>输入 <code>***</code> 或者 <code>---</code> 再按回车即可绘制一条水平线，如下：</p>
-<hr>
-<h3 id="目录（TOC）"><a href="#目录（TOC）" class="headerlink" title="目录（TOC）"></a>目录（TOC）</h3><p>输入 <code>[ toc ]</code> 然后回车，即可创建一个“目录”。TOC从文档中提取所有标题，其内容将自动更新。</p>
-<h2 id="跨度元素"><a href="#跨度元素" class="headerlink" title="跨度元素"></a>跨度元素</h2><p>跨度元素即图片，网址，视频等，在Typora中输入后，会立即载入并呈现。</p>
-<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><h4 id="内部链接"><a href="#内部链接" class="headerlink" title="内部链接"></a>内部链接</h4><p>这是一个带有标题属性的 <code>[链接](http://example.com/ &quot;标题&quot;)</code><br>这是一个没有标题属性的 <code>[链接](http://example.net/)</code></p>
-<p><a href="http://example.com/">链接</a></p>
-<p><a href="http://example.net/">链接</a></p>
-<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p>这是一个[参考链接]id – 无法执行</p>
-<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><p>Typora允许用&lt;括号括起来&gt;, 把URL作为链接插入。</p>
-<p>Typora还会自动链接标准网址。</p>
-<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
-<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![显示的文字](C:\Users\Hider\Desktop\echart.png &quot;图片标题&quot;)</span><br><span class="line">![显示的文字](C:\Users\Hider\Desktop\echart.png)</span><br></pre></td></tr></table></figure>
-
-<p>除了以上2种方式之外，还可以直接将图片拖拽进来，自动生成链接。</p>
-<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>使用 <code>*单个星号*</code> 或者 <code>_单下划线_</code> 可以字体倾斜。快捷键 <code>Ctrl + I</code></p>
-<p><em>斜体</em></p>
-<h3 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h3><p>使用 <code>**两个星号**</code> 或者 <code>__两个下划线__</code> 可以字体加粗。快捷键 <code>Ctrl + B</code></p>
-<p><strong>加粗</strong></p>
-<h3 id="加粗斜体"><a href="#加粗斜体" class="headerlink" title="加粗斜体"></a>加粗斜体</h3><p>使用<code>***加粗斜体***</code>可以加粗斜体。</p>
-<p><em><strong>加粗斜体</strong></em></p>
-<h3 id="代码标记"><a href="#代码标记" class="headerlink" title="代码标记"></a>代码标记</h3><p>标记代码使用反引号，即在英文输入法下，ESC键下面和1键左边的符号。</p>
-<blockquote>
-<p>使用该 <code>printf()</code>功能</p>
-</blockquote>
-<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>使用<code>~~删除线~~</code> 快捷键 <code>Alt + Shift + 5</code></p>
-<p>删除线</p>
-<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>\下划线 – 无法执行</p>
-<p>参考另一篇文章，可执行。</p>
-<p>通过<code>&lt;u&gt;下划线的内容&lt;/u&gt;</code> 或者 快捷键<code>Ctrl + U</code>可实现下划线</p>
-<p>下划线的内容</p>
-<h3 id="表情符号"><a href="#表情符号" class="headerlink" title="表情符号"></a>表情符号</h3><p>Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。</p>
-<p>:smile – 无法显示</p>
-<p>😺</p>
-<h3 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h3><p>可以使用 <code>&lt;sub&gt;文本&lt;/sub&gt;</code>实现下标。</p>
-<p>(需在设置中打开该功能)</p>
-<p>H2O</p>
-<p>H2O</p>
-<h3 id="上标"><a href="#上标" class="headerlink" title="上标"></a>上标</h3><p>可以使用<code>&lt;sup&gt;文本&lt;/sup&gt;</code>实现上标。</p>
-<p>(需在设置中打开该功能)</p>
-<p>X2</p>
-<p>X2</p>
-<h3 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h3><p><code>==高亮==</code>(需在设置中打开该功能)</p>
-<p>我是最重要的</p>
-<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>使用 <code>&lt;center&gt;这是要居中的内容&lt;/center&gt;</code>可以使文本居中</p>
-<p>这是要居中的文本内容</p>
-<h3 id="换行符-1"><a href="#换行符-1" class="headerlink" title="换行符"></a>换行符</h3><p>使用 <code>空格 + 空格 + Enter</code>可以实现换行，例如：</p>
-<p>或者可以使用<code>&lt;br/&gt;</code>实现换行。</p>
-<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
-<p><strong>文本加粗</strong><br>** 正常显示星号 **</p>
-<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line"><span class="bullet">*</span>   星号</span><br><span class="line"><span class="emphasis">_   下划线</span></span><br><span class="line"><span class="emphasis">&#123;&#125;  花括号</span></span><br><span class="line"><span class="emphasis">[]  方括号</span></span><br><span class="line"><span class="emphasis">()  小括号</span></span><br><span class="line"><span class="emphasis">#   井字号</span></span><br><span class="line"><span class="emphasis">+   加号</span></span><br><span class="line"><span class="emphasis">-   减号</span></span><br><span class="line"><span class="emphasis">.   英文句点</span></span><br><span class="line"><span class="emphasis">!   感叹号</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>支持HTML</p>
-<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
-<p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑</span><br><span class="line">&lt;kbd&gt; &lt;/kbd&gt; -- 白色框框</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li><ol>
-<li>建议打开大纲视图<code>Ctrl + Shift + 1</code></li>
-<li>插入表格需要顶格写，否则无法显示</li>
-<li>语法无须刻意记忆，右键可查询</li>
-</ol>
-</li>
-</ol>
-<p>　　　　　　　</p>
-]]></content>
-      <categories>
-        <category>tools</category>
-      </categories>
-      <tags>
-        <tag>Typora</tag>
-        <tag>MarkDown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>坑</title>
-    <url>/2021/09/18/%E5%9D%91/</url>
-    <content><![CDATA[<h2 id="mysql报java-sql-SQLException-Unknown-character-set-index-for-field-‘255’-received-from-server"><a href="#mysql报java-sql-SQLException-Unknown-character-set-index-for-field-‘255’-received-from-server" class="headerlink" title="mysql报java.sql.SQLException: Unknown character set index for field ‘255’ received from server."></a>mysql报java.sql.SQLException: Unknown character set index for field ‘255’ received from server.</h2><p>原因：mysql-connector-java版本太低。通信错误</p>
-<h2 id="tomcat10项目启动失败，监听器启动失败等错误"><a href="#tomcat10项目启动失败，监听器启动失败等错误" class="headerlink" title="tomcat10项目启动失败，监听器启动失败等错误"></a>tomcat10项目启动失败，监听器启动失败等错误</h2><p>查阅tomcat官网信息可知</p>
-<blockquote>
-<h3 id="Tomcat-10-Software-Downloads"><a href="#Tomcat-10-Software-Downloads" class="headerlink" title="Tomcat 10 Software Downloads"></a>Tomcat 10 Software Downloads</h3><p>Welcome to the Apache Tomcat® 10.x software download page. This page provides download links for obtaining the latest version of Tomcat 10.0.x software, as well as links to the archives of older releases.</p>
-<p>Unsure which version you need? Specification versions implemented, minimum Java version required and lots more useful information may be found on the ‘<a href="https://tomcat.apache.org/whichversion.html">which version?</a>‘ page.</p>
-<p>Users of Tomcat 10 onwards should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from ***<code>javax.*</code> to <code>jakarta.* ***</code>. This will almost certainly require code changes to enable applications to migrate from Tomcat 9 and earlier to Tomcat 10 and later. A <a href="https://github.com/apache/tomcat-jakartaee-migration">migration tool</a> has been developed to aid this process.</p>
-</blockquote>
-<p>回退tomcat9即可</p>
-<h2 id="tomcat10运行ssm项目启动成功，代码配置绝对正确，但都是404"><a href="#tomcat10运行ssm项目启动成功，代码配置绝对正确，但都是404" class="headerlink" title="tomcat10运行ssm项目启动成功，代码配置绝对正确，但都是404"></a>tomcat10运行ssm项目启动成功，代码配置绝对正确，但都是404</h2><p>回退tomcat9解决问题，可能与上一个原因一致</p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ubuntu使用deepinwine</title>
-    <url>/2021/09/22/ubuntu%E4%BD%BF%E7%94%A8deepinwine/</url>
-    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O- https://deepin-wine.i-m.dev/setup.sh | sh</span><br></pre></td></tr></table></figure>
-
-<h3 id="在终端中使用命令，添加软件仓库并自动刷新缓存"><a href="#在终端中使用命令，添加软件仓库并自动刷新缓存" class="headerlink" title="在终端中使用命令，添加软件仓库并自动刷新缓存"></a>在终端中使用命令，添加软件仓库并自动刷新缓存</h3><p>[]: <a href="https://deepin-wine.i-m.dev/">https://deepin-wine.i-m.dev/</a>    “deepin-wine”</p>
-<h3 id="setup-sh"><a href="#setup-sh" class="headerlink" title="setup.sh"></a>setup.sh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加架构</span></span><br><span class="line">ARCHITECTURE=$(dpkg --print-architecture &amp;&amp; dpkg --print-foreign-architectures)</span><br><span class="line"><span class="keyword">if</span> ! <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$ARCHITECTURE</span>&quot;</span> | grep -qE <span class="string">&#x27;amd64|i386&#x27;</span>; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;必须amd64/i386机型才能移植deepin-wine&quot;</span></span><br><span class="line">    <span class="built_in">return</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$ARCHITECTURE</span>&quot;</span> | grep -qE <span class="string">&#x27;i386&#x27;</span> || sudo dpkg --add-architecture i386</span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">LIST_FILE=<span class="string">&quot;/etc/apt/sources.list.d/deepin-wine.i-m.dev.list&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加软件源</span></span><br><span class="line">sudo tee <span class="string">&quot;<span class="variable">$LIST_FILE</span>&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">deb [trusted=yes] https://deepin-wine.i-m.dev /</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置优先级</span></span><br><span class="line">sudo tee <span class="string">&quot;/etc/apt/preferences.d/deepin-wine.i-m.dev.pref&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">Package: *</span><br><span class="line">Pin: release l=deepin-wine</span><br><span class="line">Pin-Priority: 200</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加XDG_DATA_DIRS配置，使得应用图标能正常显示</span></span><br><span class="line">sudo tee <span class="string">&quot;/etc/profile.d/deepin-wine.i-m.dev.sh&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">XDG_DATA_DIRS=<span class="variable">$&#123;XDG_DATA_DIRS:-/usr/local/share:/usr/share&#125;</span></span><br><span class="line"><span class="keyword">for</span> deepin_dir <span class="keyword">in</span> /opt/apps/*/entries; <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [ -d <span class="string">&quot;<span class="variable">$deepin_dir</span>/applications&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        XDG_DATA_DIRS=<span class="string">&quot;<span class="variable">$XDG_DATA_DIRS</span>:<span class="variable">$deepin_dir</span>&quot;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">export</span> XDG_DATA_DIRS</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新软件源</span></span><br><span class="line">sudo apt-get update --no-list-cleanup -o Dir::Etc::sourcelist=<span class="string">&quot;<span class="variable">$LIST_FILE</span>&quot;</span> -o Dir::Etc::sourceparts=<span class="string">&quot;-&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span> <span class="string">&quot;</span></span><br><span class="line"><span class="string">\033[32m大功告成，现在可以试试安装更新deepin-wine软件了，如：</span></span><br><span class="line"><span class="string">微信：sudo apt-get install com.qq.weixin.deepin</span></span><br><span class="line"><span class="string">QQ：sudo apt-get install com.qq.im.deepin</span></span><br><span class="line"><span class="string">TIM：sudo apt-get install com.qq.office.deepin</span></span><br><span class="line"><span class="string">钉钉：sudo apt-get install com.dingtalk.deepin</span></span><br><span class="line"><span class="string">完整列表见 https://deepin-wine.i-m.dev/</span></span><br><span class="line"><span class="string">\033[31;1m</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 尽量将main restricted universe multiverse这几个系统源都启用（自行百度），免得依赖问题多。</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 安装后需要注销重登录才能显示应用图标。</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 出了问题？先去github主页看README，再看别人提过的issue，再百度搜搜，避免直接就提issue。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">\033[36;1m如果觉得有用，不妨来给项目加个star：\033[25mhttps://github.com/zq1997/deepin-wine</span></span><br><span class="line"><span class="string">\033[0m&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="使用-deepinwine-安装企业微信后无法查看图片-头像的解决方法"><a href="#使用-deepinwine-安装企业微信后无法查看图片-头像的解决方法" class="headerlink" title="使用 deepinwine 安装企业微信后无法查看图片/头像的解决方法"></a>使用 deepinwine 安装企业微信后无法查看图片/头像的解决方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install libjpeg62:i386</span><br></pre></td></tr></table></figure>
-
-<h3 id="Ubuntu-Packages-Search"><a href="#Ubuntu-Packages-Search" class="headerlink" title="Ubuntu Packages Search"></a>Ubuntu Packages Search</h3><p>[]: <a href="https://packages.ubuntu.com/">https://packages.ubuntu.com/</a>    “Packages Search”</p>
-<h3 id="RTL8723BE无线网卡驱动掉线"><a href="#RTL8723BE无线网卡驱动掉线" class="headerlink" title="RTL8723BE无线网卡驱动掉线"></a>RTL8723BE无线网卡驱动掉线</h3><p>转载：<a href="https://blog.csdn.net/chenhao0428/article/details/51885805?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link">https://blog.csdn.net/chenhao0428/article/details/51885805?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link</a></p>
-<p>  Google上搜索Linux和RTL8723BE这两个关键词会找到网友的大量吐槽，想必同样使用Linux和RTL8723BE的你会感同身受，现将我遇到过的问题及解决方法记录一下（前人埋坑，后人防踩……）：</p>
-<p>一、安装问题：</p>
-<pre><code>   sudo apt-get install linux-headers-generic build-essential git
-
-   git clone https://github.com/lwfinger/rtlwifi_new
-
-   cd rtlwifi_new
-
-   sudo make install
-
-   sudo modprobe rtl8723be
-</code></pre>
-<p>二、无线信号太弱的问题：</p>
-<pre><code>   这个问题的原因在于天线信号强度ant_sel有三个设置等级0,1,2，强度依次递增，默认是0所以最弱！！！
-
-   sudo vim /etc/modprobe.d/rtl8723be.conf
-
-   在该文件添加一句：
-
-   options rtl8723be ant_sel=2
-</code></pre>
-<p>三、无线不稳定容易掉线的问题：</p>
-<pre><code>   这个问题的原因在于它的节能休眠机制。
-
-   sudo vim /etc/modprobe.d/rtl8723be.conf
-
-   在该文件添加以下语句：
-
-   options rtl8723be ips=0
-
-   options rtl8723be fwlps=0
-
-   options rtl8723be swenc=1
-</code></pre>
-]]></content>
-      <categories>
-        <category>ubuntu</category>
-      </categories>
-      <tags>
-        <tag>ubuntu</tag>
-        <tag>deepin-wine</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>啥是SQL</title>
-    <url>/2021/09/18/%E5%95%A5%E6%98%AFSQL/</url>
-    <content><![CDATA[<h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1    数据库"></a>1.1    数据库</h3><p>​            数据库就是一个文件柜，用于存放数据。</p>
-<blockquote>
-<p>数据库（database）<br>保存有组织的数据的容器（通常是一个文件或一组文件）。</p>
-</blockquote>
-<h3 id="1-2-表"><a href="#1-2-表" class="headerlink" title="1.2    表"></a>1.2    表</h3><p>​            当我们往文件柜中存放资料时，并非随手乱扔。而是有特定的结构。我们会创建一个表。</p>
-<blockquote>
-<p>表（table）<br>某种特定类型数据的结构化清单。</p>
-</blockquote>
-<p>​            通常我们在同一张表中存放的是同一种类型的数据。比方说我们不应该将用户数据和购买记录放在同一张表中。并且表的名字在同一个数据库中是唯一的。</p>
-<p>​            表具有一定的结构。表的结构定义的表中的数据会如何存储，存储什么样的数据，数据如何被分解。用来描述表的信息就是模式。</p>
-<blockquote>
-<p>模式（schema）<br>关于数据库和表的布局结构的信息。</p>
-</blockquote>
-<h3 id="1-3-列"><a href="#1-3-列" class="headerlink" title="1.3    列"></a>1.3    列</h3><p>​            表是由不同的列组成的。列存储表中的某一部分的信息（字段）。</p>
-<blockquote>
-<p>列（column）</p>
-<p>表中的字段。表一般是由多个列组成的。每一列存储字段定义的信息。等同于表格中的列。</p>
-</blockquote>
-<p>​            正确的将数据分解十分必要。例如，姓名，年龄，地址等都应该是独立的列。通过他们独立的列，在进行数据分类过滤将非常有帮助。在实际应用中要根据情况合理的分割数据。</p>
-<blockquote>
-<p>列中的数据要注意他的数据类型兼容。每个列都有他自己的数据类型。</p>
-</blockquote>
-<h3 id="1-4-行"><a href="#1-4-行" class="headerlink" title="1.4    行"></a>1.4    行</h3><p>​            表格中的数据是按照行存储的。一行数据为相关联的一组数据。</p>
-<h3 id="1-5-主键"><a href="#1-5-主键" class="headerlink" title="1.5    主键"></a>1.5    主键</h3><p>​            表中的一行数据用于唯一标识的字段，即可作为主键存在。例如身份证号码，订单id号码。</p>
-<blockquote>
-<p>主键（primary key）<br>能够<strong>唯一</strong>标识表中每一行。</p>
-<p>虽然并不总是需要主键，但多数数据库设计者都会保证他们创建的每表具有一个主键，以便于以后的数据操作和管理。</p>
-</blockquote>
-<h3 id="1-6-什么是SQL"><a href="#1-6-什么是SQL" class="headerlink" title="1.6    什么是SQL"></a>1.6    什么是SQL</h3><blockquote>
-<p>SQL是 Structured Query Language（结构化查询语言）的缩写。SQL是一种专门用来与数据库沟通的语言。</p>
-</blockquote>
-<blockquote>
-<p>SQL有如下的优点：</p>
-<ul>
-<li>SQL不是某个特定数据库供应商专有的语言。几乎所有重要的 DBMS都支持 SQL，所以学习此语言使你几乎能与所有数据库打交道。</li>
-<li>SQL简单易学。它的语句全都是由有很强描述性的英语单词组成，而且这些单词的数目不多。</li>
-<li>SQL虽然看上去很简单，但实际上是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库操作。</li>
-</ul>
-</blockquote>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL入门</title>
     <url>/2021/09/18/MySQL%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<h3 id="SQL-分类"><a href="#SQL-分类" class="headerlink" title="SQL 分类"></a>SQL 分类</h3><p>​    SQL 语句主要可以划分为以下 3 个类别。</p>
@@ -399,6 +119,56 @@
       </tags>
   </entry>
   <entry>
+    <title>啥是SQL</title>
+    <url>/2021/09/18/%E5%95%A5%E6%98%AFSQL/</url>
+    <content><![CDATA[<h3 id="1-1-数据库"><a href="#1-1-数据库" class="headerlink" title="1.1    数据库"></a>1.1    数据库</h3><p>​            数据库就是一个文件柜，用于存放数据。</p>
+<blockquote>
+<p>数据库（database）<br>保存有组织的数据的容器（通常是一个文件或一组文件）。</p>
+</blockquote>
+<h3 id="1-2-表"><a href="#1-2-表" class="headerlink" title="1.2    表"></a>1.2    表</h3><p>​            当我们往文件柜中存放资料时，并非随手乱扔。而是有特定的结构。我们会创建一个表。</p>
+<blockquote>
+<p>表（table）<br>某种特定类型数据的结构化清单。</p>
+</blockquote>
+<p>​            通常我们在同一张表中存放的是同一种类型的数据。比方说我们不应该将用户数据和购买记录放在同一张表中。并且表的名字在同一个数据库中是唯一的。</p>
+<p>​            表具有一定的结构。表的结构定义的表中的数据会如何存储，存储什么样的数据，数据如何被分解。用来描述表的信息就是模式。</p>
+<blockquote>
+<p>模式（schema）<br>关于数据库和表的布局结构的信息。</p>
+</blockquote>
+<h3 id="1-3-列"><a href="#1-3-列" class="headerlink" title="1.3    列"></a>1.3    列</h3><p>​            表是由不同的列组成的。列存储表中的某一部分的信息（字段）。</p>
+<blockquote>
+<p>列（column）</p>
+<p>表中的字段。表一般是由多个列组成的。每一列存储字段定义的信息。等同于表格中的列。</p>
+</blockquote>
+<p>​            正确的将数据分解十分必要。例如，姓名，年龄，地址等都应该是独立的列。通过他们独立的列，在进行数据分类过滤将非常有帮助。在实际应用中要根据情况合理的分割数据。</p>
+<blockquote>
+<p>列中的数据要注意他的数据类型兼容。每个列都有他自己的数据类型。</p>
+</blockquote>
+<h3 id="1-4-行"><a href="#1-4-行" class="headerlink" title="1.4    行"></a>1.4    行</h3><p>​            表格中的数据是按照行存储的。一行数据为相关联的一组数据。</p>
+<h3 id="1-5-主键"><a href="#1-5-主键" class="headerlink" title="1.5    主键"></a>1.5    主键</h3><p>​            表中的一行数据用于唯一标识的字段，即可作为主键存在。例如身份证号码，订单id号码。</p>
+<blockquote>
+<p>主键（primary key）<br>能够<strong>唯一</strong>标识表中每一行。</p>
+<p>虽然并不总是需要主键，但多数数据库设计者都会保证他们创建的每表具有一个主键，以便于以后的数据操作和管理。</p>
+</blockquote>
+<h3 id="1-6-什么是SQL"><a href="#1-6-什么是SQL" class="headerlink" title="1.6    什么是SQL"></a>1.6    什么是SQL</h3><blockquote>
+<p>SQL是 Structured Query Language（结构化查询语言）的缩写。SQL是一种专门用来与数据库沟通的语言。</p>
+</blockquote>
+<blockquote>
+<p>SQL有如下的优点：</p>
+<ul>
+<li>SQL不是某个特定数据库供应商专有的语言。几乎所有重要的 DBMS都支持 SQL，所以学习此语言使你几乎能与所有数据库打交道。</li>
+<li>SQL简单易学。它的语句全都是由有很强描述性的英语单词组成，而且这些单词的数目不多。</li>
+<li>SQL虽然看上去很简单，但实际上是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库操作。</li>
+</ul>
+</blockquote>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据检索</title>
     <url>/2021/09/18/%E6%95%B0%E6%8D%AE%E6%A3%80%E7%B4%A2/</url>
     <content><![CDATA[<h3 id="2-1-select初步"><a href="#2-1-select初步" class="headerlink" title="2.1    select初步"></a>2.1    select初步</h3><h4 id="1-从表中选取数据。"><a href="#1-从表中选取数据。" class="headerlink" title="1.从表中选取数据。"></a>1.从表中选取数据。</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> name <span class="keyword">from</span> users;  #从users表中选取name列</span><br></pre></td></tr></table></figure>
@@ -429,42 +199,6 @@
 
 
 </blockquote>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL常见存储引擎</title>
-    <url>/2021/09/20/MySQL%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/</url>
-    <content><![CDATA[<h3 id="查看当前版本支持的存储引擎"><a href="#查看当前版本支持的存储引擎" class="headerlink" title="查看当前版本支持的存储引擎"></a>查看当前版本支持的存储引擎</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">show</span> engines;</span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="operator">|</span>Engine	<span class="operator">|</span>Support	<span class="operator">|</span>Comment	<span class="operator">|</span>Transactions	<span class="operator">|</span>XA	<span class="operator">|</span>Savepoints<span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="operator">|</span>ARCHIVE	<span class="operator">|</span>YES	<span class="operator">|</span>Archivestorageengine	<span class="operator">|</span><span class="keyword">NO</span>	<span class="operator">|</span><span class="keyword">NO</span>	<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>BLACKHOLE	<span class="operator">|</span>YES	<span class="operator">|</span><span class="operator">/</span>dev<span class="operator">/</span>nullstorageengine(anythingyouwritetoitdisappears)<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MRG_MYISAM	<span class="operator">|</span>YES	<span class="operator">|</span>CollectionofidenticalMyISAMtables<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>FEDERATED	<span class="operator">|</span><span class="keyword">NO</span>		<span class="operator">|</span>FederatedMySQLstorageengine<span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MyISAM		<span class="operator">|</span>YES	<span class="operator">|</span>MyISAMstorageengine<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>PERFORMANCE_SCHEMA<span class="operator">|</span>YES<span class="operator">|</span>PerformanceSchema<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>InnoDB<span class="operator">|</span>	<span class="keyword">DEFAULT</span>	<span class="operator">|</span>Supportstransactions,<span class="type">row</span><span class="operator">-</span>levellocking,andforeignkeys<span class="operator">|</span>YES<span class="operator">|</span>YES<span class="operator">|</span>YES<span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MEMORY		<span class="operator">|</span>YES	<span class="operator">|</span>Hashbased,storedinmemory,usefulfortemporarytables<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>CSV		<span class="operator">|</span>YES	<span class="operator">|</span>CSVstorageengine<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="number">9</span>rowsinset(<span class="number">0.00</span>sec)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="QQ%E5%9B%BE%E7%89%8720210920195642.png"></p>
-<h2 id="InnoDB"><a href="#InnoDB" class="headerlink" title="InnoDB"></a>InnoDB</h2><p>​            InnoDB 存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比 MyISAM的存储引擎，InnoDB 写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。<br>下面将重点介绍 InnoDB 存储引擎的表使用过程中不同于其他存储引擎的特点。</p>
-<h4 id="1、自动增长列"><a href="#1、自动增长列" class="headerlink" title="1、自动增长列"></a>1、自动增长列</h4><p>​            InnoDB 表的自动增长列可以手工插入，但是插入的值如果是空或者 0，则实际插入的将是自动增长后的值。<br>​            </p>
-<blockquote>
-<p>可以通过“ALTER TABLE *** AUTO_INCREMENT = n;”语句强制设置自动增长列的初识值，默认从 1 开始，但是该强制的默认值是保留在内存中的，如果该值在使用之前数据库重新启动，那么这个强制的默认值就会丢失，就需要在数据库启动以后重新设置。</p>
-</blockquote>
-<pre><code>        对于 InnoDB 表，**自动增长列必须是索引**。
-</code></pre>
-<h4 id="2、外键约束"><a href="#2、外键约束" class="headerlink" title="2、外键约束"></a>2、外键约束</h4><p>​            MySQL 支持外键的存储引擎只有 InnoDB，在创建外键的时候，要求父表必须有对应的索引，子表在创建外键的时候也会自动创建对应的索引。<br>​            下面是样例数据库中的两个表，country 表是父表，country_id 为主键索引，city 表是子表，country_id 字段对 country 表的 country_id 有外键。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> country (</span><br><span class="line">country_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">country <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">last_update <span class="type">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line"><span class="keyword">PRIMARY</span> KEY (country_id)</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> city (</span><br><span class="line">city_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">city <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">country_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">last_update <span class="type">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line"><span class="keyword">PRIMARY</span> KEY (city_id),</span><br><span class="line">KEY idx_fk_country_id (country_id),</span><br><span class="line"><span class="keyword">CONSTRAINT</span> `fk_city_country` <span class="keyword">FOREIGN</span> KEY (country_id) <span class="keyword">REFERENCES</span> country (country_id) <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DELETE</span> RESTRICT <span class="keyword">ON</span> UPDATE CASCADE</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>当某个表被其他表创建了外键参照，那么该表的对应索引或者主键禁止被删除。</p>
-</blockquote>
-<blockquote>
-<p>​        在导入多个表的数据时，如果需要忽略表之前的导入顺序，可以暂时关闭外键的检查；同样，在执行 LOAD DATA 和 ALTER TABLE 操作的时候，可以通过暂时关闭外键约束来加快处理的速度，关闭的命令是“SET FOREIGN_KEY_CHECKS = 0;”，执行完成之后，通过执行“SET FOREIGN_KEY_CHECKS = 1;”语句改回原状态。</p>
-</blockquote>
-<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><ul>
-<li>MyISAM：插件式存储引擎。如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常适合的。MyISAM 是在 Web、数据仓储和其他应用环境下最常使用的存储引擎之一。</li>
-<li>InnoDB：用于事务处理应用程序，支持外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操作除了插入和查询以外，还包括很多的更新、删除操作，那么 InnoDB 存储引擎应该是比较合适的选择。InnoDB 存储引擎除了有效地降低由于删除和更新导致的锁定，还可以确保事务的完整提交（Commit）和回滚（Rollback），对于类似计费系统或者财务系统等对数据准确性要求比较高的系统，InnoDB 都是合适的选<br>择。</li>
-<li>MEMORY：将所有数据保存在 RAM 中，在需要快速定位记录和其他类似数据的环境下，可提供极快的访问MEMORY 的缺陷是对表的大小有限制，太大的表无法 CACHE 在内存中，其次是要确保表的数据可以恢复，数据库异常终止后表中的数据是可以恢复的。MEMORY 表通常用于更新不太频繁的小表，用以快速得到访问结果</li>
-<li>MERGE：用于将一系列等同的 MyISAM 表以逻辑方式组合在一起，并作为一个对象引用它们。MERGE 表的优点在于可以突破对单个 MyISAM 表大小的限制，并且通过将不同的表分布在多个磁盘上，可以有效地改善 MERGE 表的访问效率。这对于诸如数据仓储等 VLDB环境十分适合。</li>
-</ul>
 ]]></content>
       <categories>
         <category>MySQL</category>
@@ -832,6 +566,97 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL常见存储引擎</title>
+    <url>/2021/09/20/MySQL%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/</url>
+    <content><![CDATA[<h3 id="查看当前版本支持的存储引擎"><a href="#查看当前版本支持的存储引擎" class="headerlink" title="查看当前版本支持的存储引擎"></a>查看当前版本支持的存储引擎</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">show</span> engines;</span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="operator">|</span>Engine	<span class="operator">|</span>Support	<span class="operator">|</span>Comment	<span class="operator">|</span>Transactions	<span class="operator">|</span>XA	<span class="operator">|</span>Savepoints<span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="operator">|</span>ARCHIVE	<span class="operator">|</span>YES	<span class="operator">|</span>Archivestorageengine	<span class="operator">|</span><span class="keyword">NO</span>	<span class="operator">|</span><span class="keyword">NO</span>	<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>BLACKHOLE	<span class="operator">|</span>YES	<span class="operator">|</span><span class="operator">/</span>dev<span class="operator">/</span>nullstorageengine(anythingyouwritetoitdisappears)<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MRG_MYISAM	<span class="operator">|</span>YES	<span class="operator">|</span>CollectionofidenticalMyISAMtables<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>FEDERATED	<span class="operator">|</span><span class="keyword">NO</span>		<span class="operator">|</span>FederatedMySQLstorageengine<span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span><span class="keyword">NULL</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MyISAM		<span class="operator">|</span>YES	<span class="operator">|</span>MyISAMstorageengine<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>PERFORMANCE_SCHEMA<span class="operator">|</span>YES<span class="operator">|</span>PerformanceSchema<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>InnoDB<span class="operator">|</span>	<span class="keyword">DEFAULT</span>	<span class="operator">|</span>Supportstransactions,<span class="type">row</span><span class="operator">-</span>levellocking,andforeignkeys<span class="operator">|</span>YES<span class="operator">|</span>YES<span class="operator">|</span>YES<span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>MEMORY		<span class="operator">|</span>YES	<span class="operator">|</span>Hashbased,storedinmemory,usefulfortemporarytables<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>CSV		<span class="operator">|</span>YES	<span class="operator">|</span>CSVstorageengine<span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span><span class="keyword">NO</span><span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------------------+---------+----------------------------------------------------------------+--------------+------+------------+</span></span><br><span class="line"><span class="number">9</span>rowsinset(<span class="number">0.00</span>sec)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="QQ%E5%9B%BE%E7%89%8720210920195642.png"></p>
+<h2 id="InnoDB"><a href="#InnoDB" class="headerlink" title="InnoDB"></a>InnoDB</h2><p>​            InnoDB 存储引擎提供了具有提交、回滚和崩溃恢复能力的事务安全。但是对比 MyISAM的存储引擎，InnoDB 写的处理效率差一些并且会占用更多的磁盘空间以保留数据和索引。<br>下面将重点介绍 InnoDB 存储引擎的表使用过程中不同于其他存储引擎的特点。</p>
+<h4 id="1、自动增长列"><a href="#1、自动增长列" class="headerlink" title="1、自动增长列"></a>1、自动增长列</h4><p>​            InnoDB 表的自动增长列可以手工插入，但是插入的值如果是空或者 0，则实际插入的将是自动增长后的值。<br>​            </p>
+<blockquote>
+<p>可以通过“ALTER TABLE *** AUTO_INCREMENT = n;”语句强制设置自动增长列的初识值，默认从 1 开始，但是该强制的默认值是保留在内存中的，如果该值在使用之前数据库重新启动，那么这个强制的默认值就会丢失，就需要在数据库启动以后重新设置。</p>
+</blockquote>
+<pre><code>        对于 InnoDB 表，**自动增长列必须是索引**。
+</code></pre>
+<h4 id="2、外键约束"><a href="#2、外键约束" class="headerlink" title="2、外键约束"></a>2、外键约束</h4><p>​            MySQL 支持外键的存储引擎只有 InnoDB，在创建外键的时候，要求父表必须有对应的索引，子表在创建外键的时候也会自动创建对应的索引。<br>​            下面是样例数据库中的两个表，country 表是父表，country_id 为主键索引，city 表是子表，country_id 字段对 country 表的 country_id 有外键。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> country (</span><br><span class="line">country_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">country <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">last_update <span class="type">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line"><span class="keyword">PRIMARY</span> KEY (country_id)</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> city (</span><br><span class="line">city_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT,</span><br><span class="line">city <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">country_id <span class="type">SMALLINT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">last_update <span class="type">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> UPDATE <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line"><span class="keyword">PRIMARY</span> KEY (city_id),</span><br><span class="line">KEY idx_fk_country_id (country_id),</span><br><span class="line"><span class="keyword">CONSTRAINT</span> `fk_city_country` <span class="keyword">FOREIGN</span> KEY (country_id) <span class="keyword">REFERENCES</span> country (country_id) <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DELETE</span> RESTRICT <span class="keyword">ON</span> UPDATE CASCADE</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>当某个表被其他表创建了外键参照，那么该表的对应索引或者主键禁止被删除。</p>
+</blockquote>
+<blockquote>
+<p>​        在导入多个表的数据时，如果需要忽略表之前的导入顺序，可以暂时关闭外键的检查；同样，在执行 LOAD DATA 和 ALTER TABLE 操作的时候，可以通过暂时关闭外键约束来加快处理的速度，关闭的命令是“SET FOREIGN_KEY_CHECKS = 0;”，执行完成之后，通过执行“SET FOREIGN_KEY_CHECKS = 1;”语句改回原状态。</p>
+</blockquote>
+<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><ul>
+<li>MyISAM：插件式存储引擎。如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常适合的。MyISAM 是在 Web、数据仓储和其他应用环境下最常使用的存储引擎之一。</li>
+<li>InnoDB：用于事务处理应用程序，支持外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操作除了插入和查询以外，还包括很多的更新、删除操作，那么 InnoDB 存储引擎应该是比较合适的选择。InnoDB 存储引擎除了有效地降低由于删除和更新导致的锁定，还可以确保事务的完整提交（Commit）和回滚（Rollback），对于类似计费系统或者财务系统等对数据准确性要求比较高的系统，InnoDB 都是合适的选<br>择。</li>
+<li>MEMORY：将所有数据保存在 RAM 中，在需要快速定位记录和其他类似数据的环境下，可提供极快的访问MEMORY 的缺陷是对表的大小有限制，太大的表无法 CACHE 在内存中，其次是要确保表的数据可以恢复，数据库异常终止后表中的数据是可以恢复的。MEMORY 表通常用于更新不太频繁的小表，用以快速得到访问结果</li>
+<li>MERGE：用于将一系列等同的 MyISAM 表以逻辑方式组合在一起，并作为一个对象引用它们。MERGE 表的优点在于可以突破对单个 MyISAM 表大小的限制，并且通过将不同的表分布在多个磁盘上，可以有效地改善 MERGE 表的访问效率。这对于诸如数据仓储等 VLDB环境十分适合。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ubuntu使用deepinwine</title>
+    <url>/2021/09/22/ubuntu%E4%BD%BF%E7%94%A8deepinwine/</url>
+    <content><![CDATA[<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O- https://deepin-wine.i-m.dev/setup.sh | sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="在终端中使用命令，添加软件仓库并自动刷新缓存"><a href="#在终端中使用命令，添加软件仓库并自动刷新缓存" class="headerlink" title="在终端中使用命令，添加软件仓库并自动刷新缓存"></a>在终端中使用命令，添加软件仓库并自动刷新缓存</h3><p>[]: <a href="https://deepin-wine.i-m.dev/">https://deepin-wine.i-m.dev/</a>    “deepin-wine”</p>
+<h3 id="setup-sh"><a href="#setup-sh" class="headerlink" title="setup.sh"></a>setup.sh</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加架构</span></span><br><span class="line">ARCHITECTURE=$(dpkg --print-architecture &amp;&amp; dpkg --print-foreign-architectures)</span><br><span class="line"><span class="keyword">if</span> ! <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$ARCHITECTURE</span>&quot;</span> | grep -qE <span class="string">&#x27;amd64|i386&#x27;</span>; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;必须amd64/i386机型才能移植deepin-wine&quot;</span></span><br><span class="line">    <span class="built_in">return</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$ARCHITECTURE</span>&quot;</span> | grep -qE <span class="string">&#x27;i386&#x27;</span> || sudo dpkg --add-architecture i386</span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line">LIST_FILE=<span class="string">&quot;/etc/apt/sources.list.d/deepin-wine.i-m.dev.list&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加软件源</span></span><br><span class="line">sudo tee <span class="string">&quot;<span class="variable">$LIST_FILE</span>&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">deb [trusted=yes] https://deepin-wine.i-m.dev /</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置优先级</span></span><br><span class="line">sudo tee <span class="string">&quot;/etc/apt/preferences.d/deepin-wine.i-m.dev.pref&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">Package: *</span><br><span class="line">Pin: release l=deepin-wine</span><br><span class="line">Pin-Priority: 200</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加XDG_DATA_DIRS配置，使得应用图标能正常显示</span></span><br><span class="line">sudo tee <span class="string">&quot;/etc/profile.d/deepin-wine.i-m.dev.sh&quot;</span> &gt;/dev/null &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">XDG_DATA_DIRS=<span class="variable">$&#123;XDG_DATA_DIRS:-/usr/local/share:/usr/share&#125;</span></span><br><span class="line"><span class="keyword">for</span> deepin_dir <span class="keyword">in</span> /opt/apps/*/entries; <span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [ -d <span class="string">&quot;<span class="variable">$deepin_dir</span>/applications&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">        XDG_DATA_DIRS=<span class="string">&quot;<span class="variable">$XDG_DATA_DIRS</span>:<span class="variable">$deepin_dir</span>&quot;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">export</span> XDG_DATA_DIRS</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新软件源</span></span><br><span class="line">sudo apt-get update --no-list-cleanup -o Dir::Etc::sourcelist=<span class="string">&quot;<span class="variable">$LIST_FILE</span>&quot;</span> -o Dir::Etc::sourceparts=<span class="string">&quot;-&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span> <span class="string">&quot;</span></span><br><span class="line"><span class="string">\033[32m大功告成，现在可以试试安装更新deepin-wine软件了，如：</span></span><br><span class="line"><span class="string">微信：sudo apt-get install com.qq.weixin.deepin</span></span><br><span class="line"><span class="string">QQ：sudo apt-get install com.qq.im.deepin</span></span><br><span class="line"><span class="string">TIM：sudo apt-get install com.qq.office.deepin</span></span><br><span class="line"><span class="string">钉钉：sudo apt-get install com.dingtalk.deepin</span></span><br><span class="line"><span class="string">完整列表见 https://deepin-wine.i-m.dev/</span></span><br><span class="line"><span class="string">\033[31;1m</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 尽量将main restricted universe multiverse这几个系统源都启用（自行百度），免得依赖问题多。</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 安装后需要注销重登录才能显示应用图标。</span></span><br><span class="line"><span class="string">\033[5m🌟\033[25m 出了问题？先去github主页看README，再看别人提过的issue，再百度搜搜，避免直接就提issue。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">\033[36;1m如果觉得有用，不妨来给项目加个star：\033[25mhttps://github.com/zq1997/deepin-wine</span></span><br><span class="line"><span class="string">\033[0m&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-deepinwine-安装企业微信后无法查看图片-头像的解决方法"><a href="#使用-deepinwine-安装企业微信后无法查看图片-头像的解决方法" class="headerlink" title="使用 deepinwine 安装企业微信后无法查看图片/头像的解决方法"></a>使用 deepinwine 安装企业微信后无法查看图片/头像的解决方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install libjpeg62:i386</span><br></pre></td></tr></table></figure>
+
+<h3 id="Ubuntu-Packages-Search"><a href="#Ubuntu-Packages-Search" class="headerlink" title="Ubuntu Packages Search"></a>Ubuntu Packages Search</h3><p>[]: <a href="https://packages.ubuntu.com/">https://packages.ubuntu.com/</a>    “Packages Search”</p>
+<h3 id="RTL8723BE无线网卡驱动掉线"><a href="#RTL8723BE无线网卡驱动掉线" class="headerlink" title="RTL8723BE无线网卡驱动掉线"></a>RTL8723BE无线网卡驱动掉线</h3><p>转载：<a href="https://blog.csdn.net/chenhao0428/article/details/51885805?utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1.no_search_link">https://blog.csdn.net/chenhao0428/article/details/51885805?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link</a></p>
+<p>  Google上搜索Linux和RTL8723BE这两个关键词会找到网友的大量吐槽，想必同样使用Linux和RTL8723BE的你会感同身受，现将我遇到过的问题及解决方法记录一下（前人埋坑，后人防踩……）：</p>
+<p>一、安装问题：</p>
+<pre><code>   sudo apt-get install linux-headers-generic build-essential git
+
+   git clone https://github.com/lwfinger/rtlwifi_new
+
+   cd rtlwifi_new
+
+   sudo make install
+
+   sudo modprobe rtl8723be
+</code></pre>
+<p>二、无线信号太弱的问题：</p>
+<pre><code>   这个问题的原因在于天线信号强度ant_sel有三个设置等级0,1,2，强度依次递增，默认是0所以最弱！！！
+
+   sudo vim /etc/modprobe.d/rtl8723be.conf
+
+   在该文件添加一句：
+
+   options rtl8723be ant_sel=2
+</code></pre>
+<p>三、无线不稳定容易掉线的问题：</p>
+<pre><code>   这个问题的原因在于它的节能休眠机制。
+
+   sudo vim /etc/modprobe.d/rtl8723be.conf
+
+   在该文件添加以下语句：
+
+   options rtl8723be ips=0
+
+   options rtl8723be fwlps=0
+
+   options rtl8723be swenc=1
+</code></pre>
+]]></content>
+      <categories>
+        <category>ubuntu</category>
+      </categories>
+      <tags>
+        <tag>ubuntu</tag>
+        <tag>deepin-wine</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vmware在manjaro上的问题</title>
     <url>/2021/09/23/vmware%E5%9C%A8manjaro%E4%B8%8A%E7%9A%84%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<h3 id="Manjaro-Linux-kernel-headers-installation-vmware提示需要linux-kernel-headers"><a href="#Manjaro-Linux-kernel-headers-installation-vmware提示需要linux-kernel-headers" class="headerlink" title="Manjaro Linux kernel headers installation (vmware提示需要linux kernel headers)"></a>Manjaro Linux kernel headers installation (vmware提示需要linux kernel headers)</h3><p>[]: <a href="https://linuxconfig.org/manjaro-linux-kernel-headers-installation">https://linuxconfig.org/manjaro-linux-kernel-headers-installation</a></p>
@@ -859,6 +684,22 @@
         <tag>vmware</tag>
         <tag>manjaro</tag>
         <tag>archlinux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysql问题合集</title>
+    <url>/2021/09/24/mysql%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<h3 id="1-此版本mysql不支持limit子句"><a href="#1-此版本mysql不支持limit子句" class="headerlink" title="1.    此版本mysql不支持limit子句"></a>1.    此版本mysql不支持limit子句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update tbl_emp <span class="keyword">set</span> department_id<span class="operator">=</span><span class="number">1</span> <span class="keyword">where</span> emp_id <span class="keyword">in</span> </span><br><span class="line">	(<span class="keyword">SELECT</span> emp_id <span class="keyword">FROM</span> `tbl_emp` limit <span class="number">10</span>)</span><br><span class="line"><span class="operator">&gt;</span> <span class="number">1235</span> <span class="operator">-</span> This version <span class="keyword">of</span> MySQL doesn<span class="string">&#x27;t yet support &#x27;</span>LIMIT <span class="operator">&amp;</span> <span class="keyword">IN</span><span class="operator">/</span><span class="keyword">ALL</span><span class="operator">/</span><span class="keyword">ANY</span><span class="operator">/</span><span class="keyword">SOME</span> subquery<span class="string">&#x27;</span></span><br><span class="line"><span class="string">&gt; 时间: 0.046s</span></span><br></pre></td></tr></table></figure>
+
+<p>解决方案很简单。套一层语句就好了</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update tbl_emp <span class="keyword">set</span> department_id<span class="operator">=</span><span class="number">1</span> </span><br><span class="line"><span class="keyword">where</span> emp_id <span class="keyword">in</span> </span><br><span class="line">	(<span class="keyword">select</span> t.emp_id <span class="keyword">from</span>  </span><br><span class="line"> 		(<span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> `tbl_emp` limit <span class="number">10</span>)</span><br><span class="line">     <span class="keyword">as</span> t)</span><br><span class="line"><span class="operator">&gt;</span> Affected <span class="keyword">rows</span>: <span class="number">10</span></span><br><span class="line"><span class="operator">&gt;</span> 时间: <span class="number">0.055</span>s</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -1051,22 +892,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mysql问题合集</title>
-    <url>/2021/09/24/mysql%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/</url>
-    <content><![CDATA[<h3 id="1-此版本mysql不支持limit子句"><a href="#1-此版本mysql不支持limit子句" class="headerlink" title="1.    此版本mysql不支持limit子句"></a>1.    此版本mysql不支持limit子句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update tbl_emp <span class="keyword">set</span> department_id<span class="operator">=</span><span class="number">1</span> <span class="keyword">where</span> emp_id <span class="keyword">in</span> </span><br><span class="line">	(<span class="keyword">SELECT</span> emp_id <span class="keyword">FROM</span> `tbl_emp` limit <span class="number">10</span>)</span><br><span class="line"><span class="operator">&gt;</span> <span class="number">1235</span> <span class="operator">-</span> This version <span class="keyword">of</span> MySQL doesn<span class="string">&#x27;t yet support &#x27;</span>LIMIT <span class="operator">&amp;</span> <span class="keyword">IN</span><span class="operator">/</span><span class="keyword">ALL</span><span class="operator">/</span><span class="keyword">ANY</span><span class="operator">/</span><span class="keyword">SOME</span> subquery<span class="string">&#x27;</span></span><br><span class="line"><span class="string">&gt; 时间: 0.046s</span></span><br></pre></td></tr></table></figure>
-
-<p>解决方案很简单。套一层语句就好了</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">update tbl_emp <span class="keyword">set</span> department_id<span class="operator">=</span><span class="number">1</span> </span><br><span class="line"><span class="keyword">where</span> emp_id <span class="keyword">in</span> </span><br><span class="line">	(<span class="keyword">select</span> t.emp_id <span class="keyword">from</span>  </span><br><span class="line"> 		(<span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> `tbl_emp` limit <span class="number">10</span>)</span><br><span class="line">     <span class="keyword">as</span> t)</span><br><span class="line"><span class="operator">&gt;</span> Affected <span class="keyword">rows</span>: <span class="number">10</span></span><br><span class="line"><span class="operator">&gt;</span> 时间: <span class="number">0.055</span>s</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>windows_kms</title>
     <url>/2021/11/17/windows-kms/</url>
     <content><![CDATA[<p><a href="https://github.com/Wind4/vlmcsd/releases">https://github.com/Wind4/vlmcsd/releases</a><br><a href="https://github.com/dylanbai8/kmspro">https://github.com/dylanbai8/kmspro</a></p>
@@ -1080,6 +905,181 @@
       <tags>
         <tag>Windows</tag>
         <tag>KMS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typora</title>
+    <url>/2021/09/17/Typora/</url>
+    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Typora是一款轻便简洁的Markdown编辑器，支持即时渲染技术，这也是与其他Markdown编辑器最显著的区别。即时渲染使得你写Markdown就想是写Word文档一样流畅自如，不像其他编辑器的有编辑栏和显示栏。</p>
+<ul>
+<li>Typora删除了预览窗口，以及所有其他不必要的干扰。取而代之的是实时预览。</li>
+<li>Markdown的语法因不同的解析器或编辑器而异，Typora使用的是<a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">GitHub Flavored Markdown</a>。</li>
+</ul>
+<h2 id="Markdown介绍"><a href="#Markdown介绍" class="headerlink" title="Markdown介绍"></a>Markdown介绍</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。　　</p>
+<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
+<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+<p>Markdown 编写的文档后缀为 <code>.md</code>, <code>.markdown</code>。</p>
+<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><ul>
+<li>加粗： <code>Ctrl + B</code></li>
+<li>标题： <code>Ctrl + H</code></li>
+<li>插入链接： <code>Ctrl + K</code></li>
+<li>插入代码： <code>Ctrl + Shift + C</code> – 无法执行</li>
+<li>行内代码： <code>Ctrl + Shift + K</code></li>
+<li>插入图片： <code>Ctrl + Shift + I</code></li>
+<li>无序列表：<code>Ctrl + Shift + L</code> – 无法执行</li>
+<li>撤销： <code>Ctrl + Z</code></li>
+<li>一级标题： <code>Ctrl + 1</code> – 以此类推</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">Typora快捷键整合</span><br><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">Ctrl+1  一阶标题    Ctrl+B  字体加粗</span></span><br><span class="line"><span class="string">Ctrl+2  二阶标题    Ctrl+I  字体倾斜</span></span><br><span class="line"><span class="string">Ctrl+3  三阶标题    Ctrl+U  下划线</span></span><br><span class="line"><span class="string">Ctrl+4  四阶标题    Ctrl+Home   返回Typora顶部</span></span><br><span class="line"><span class="string">Ctrl+5  五阶标题    Ctrl+End    返回Typora底部</span></span><br><span class="line"><span class="string">Ctrl+6  六阶标题    Ctrl+T  创建表格</span></span><br><span class="line"><span class="string">Ctrl+L  选中某句话   Ctrl+K  创建超链接</span></span><br><span class="line"><span class="string">Ctrl+D  选中某个单词  Ctrl+F  搜索</span></span><br><span class="line"><span class="string">Ctrl+E  选中相同格式的文字   Ctrl+H  搜索并替换</span></span><br><span class="line"><span class="string">Alt+Shift+5 删除线 Ctrl+Shift+I    插入图片</span></span><br><span class="line"><span class="string">Ctrl+Shift+M    公式块 Ctrl+Shift+Q    引用</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">注：一些实体符号需要在实体符号之前加”\”才能够显示</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h2><h3 id="换行符"><a href="#换行符" class="headerlink" title="换行符"></a>换行符</h3><p>在markdown中，段落由多个空格分隔。在Typora中，只需回车即可创建新段落。</p>
+<h3 id="标题级别"><a href="#标题级别" class="headerlink" title="标题级别"></a>标题级别</h3><p># 一级标题 快捷键为 Ctrl + 1<br>## 二级标题 快捷键为 Ctrl + 2<br>……<br>###### 六级标题 快捷键为 Ctrl + 6</p>
+<h3 id="引用文字"><a href="#引用文字" class="headerlink" title="引用文字"></a>引用文字</h3><p>&gt; + 空格 + 引用文字</p>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用 * + - 都可以创建一个无序列表</p>
+<ul>
+<li>AAA</li>
+<li>BBB</li>
+<li>CCC</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用 1. 2. 3. 创建有序列表</p>
+<ol>
+<li>AAA</li>
+<li>BBB</li>
+<li>CCC</li>
+</ol>
+<h3 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h3><p>\ -[ ] 不勾选<br>\ -[x] 勾选</p>
+<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>在Typora中插入程序代码的方式有两种：使用反引号 `（~ 键）、使用缩进（Tab）。</p>
+<ul>
+<li>插入行内代码，即插入一个单词或者一句代码的情况，使用 <code>code</code> 这样的形式插入。</li>
+<li>插入多行代码输入3个反引号（`） + 回车，并在后面选择一个语言名称即可实现语法高亮。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">helloworld</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;hello, world!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h3><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。根据需要加载 Mathjax 对数学公式进行渲染。</p>
+<p>按下 <code>$$</code>，然后按下回车键，即可进行数学公式的编辑。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1\times\mathbf&#123;V&#125;_2 = \mathbf&#123;X&#125;_3</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+
+<h3 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h3><p>输入 <code>| 表头1 | 表头2 |</code>并回车。即可创建一个包含2列表。快捷键 <code>Ctrl + T</code>弹出对话框。</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>不管是哪种方式，第一行为表头，第二行为分割表头和主体部分，第三行开始每一行为一个表格行</li>
+<li>列与列之间用管道符号<code>|</code> 隔开</li>
+<li>还可设置对齐方式(表头与内容之间)，如果不使用对齐标记，内容默认左对齐，表头居中对齐<ul>
+<li>左对齐 ：|</li>
+<li>右对齐 |：</li>
+<li>中对齐 ：|：</li>
+</ul>
+</li>
+<li>为了美观，可以使用空格对齐不同行的单元格，并在左右两侧都使用 | 来标记单元格边界</li>
+<li>为了使 Markdown 更清晰，| 和 - 两侧需要至少有一个空格（最左侧和最右侧的 | 外就不需要了）。</li>
+</ul>
+<h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>这个例子的脚注为[<a href="https://www.cnblogs.com/hider/p/11614688.html#fn1">1]</a>。</p>
+<p>注意：该例子脚注标识是1，脚注标识可以为字母数字下划线，但是暂不支持中文。脚注内容可为任意字符，包括中文。</p>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>输入 <code>***</code> 或者 <code>---</code> 再按回车即可绘制一条水平线，如下：</p>
+<hr>
+<h3 id="目录（TOC）"><a href="#目录（TOC）" class="headerlink" title="目录（TOC）"></a>目录（TOC）</h3><p>输入 <code>[ toc ]</code> 然后回车，即可创建一个“目录”。TOC从文档中提取所有标题，其内容将自动更新。</p>
+<h2 id="跨度元素"><a href="#跨度元素" class="headerlink" title="跨度元素"></a>跨度元素</h2><p>跨度元素即图片，网址，视频等，在Typora中输入后，会立即载入并呈现。</p>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><h4 id="内部链接"><a href="#内部链接" class="headerlink" title="内部链接"></a>内部链接</h4><p>这是一个带有标题属性的 <code>[链接](http://example.com/ &quot;标题&quot;)</code><br>这是一个没有标题属性的 <code>[链接](http://example.net/)</code></p>
+<p><a href="http://example.com/">链接</a></p>
+<p><a href="http://example.net/">链接</a></p>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p>这是一个[参考链接]id – 无法执行</p>
+<h3 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h3><p>Typora允许用&lt;括号括起来&gt;, 把URL作为链接插入。</p>
+<p>Typora还会自动链接标准网址。</p>
+<p><a href="http://www.baidu.com/">www.baidu.com</a></p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![显示的文字](C:\Users\Hider\Desktop\echart.png &quot;图片标题&quot;)</span><br><span class="line">![显示的文字](C:\Users\Hider\Desktop\echart.png)</span><br></pre></td></tr></table></figure>
+
+<p>除了以上2种方式之外，还可以直接将图片拖拽进来，自动生成链接。</p>
+<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>使用 <code>*单个星号*</code> 或者 <code>_单下划线_</code> 可以字体倾斜。快捷键 <code>Ctrl + I</code></p>
+<p><em>斜体</em></p>
+<h3 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h3><p>使用 <code>**两个星号**</code> 或者 <code>__两个下划线__</code> 可以字体加粗。快捷键 <code>Ctrl + B</code></p>
+<p><strong>加粗</strong></p>
+<h3 id="加粗斜体"><a href="#加粗斜体" class="headerlink" title="加粗斜体"></a>加粗斜体</h3><p>使用<code>***加粗斜体***</code>可以加粗斜体。</p>
+<p><em><strong>加粗斜体</strong></em></p>
+<h3 id="代码标记"><a href="#代码标记" class="headerlink" title="代码标记"></a>代码标记</h3><p>标记代码使用反引号，即在英文输入法下，ESC键下面和1键左边的符号。</p>
+<blockquote>
+<p>使用该 <code>printf()</code>功能</p>
+</blockquote>
+<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>使用<code>~~删除线~~</code> 快捷键 <code>Alt + Shift + 5</code></p>
+<p>删除线</p>
+<h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><p>\下划线 – 无法执行</p>
+<p>参考另一篇文章，可执行。</p>
+<p>通过<code>&lt;u&gt;下划线的内容&lt;/u&gt;</code> 或者 快捷键<code>Ctrl + U</code>可实现下划线</p>
+<p>下划线的内容</p>
+<h3 id="表情符号"><a href="#表情符号" class="headerlink" title="表情符号"></a>表情符号</h3><p>Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。</p>
+<p>:smile – 无法显示</p>
+<p>😺</p>
+<h3 id="下标"><a href="#下标" class="headerlink" title="下标"></a>下标</h3><p>可以使用 <code>&lt;sub&gt;文本&lt;/sub&gt;</code>实现下标。</p>
+<p>(需在设置中打开该功能)</p>
+<p>H2O</p>
+<p>H2O</p>
+<h3 id="上标"><a href="#上标" class="headerlink" title="上标"></a>上标</h3><p>可以使用<code>&lt;sup&gt;文本&lt;/sup&gt;</code>实现上标。</p>
+<p>(需在设置中打开该功能)</p>
+<p>X2</p>
+<p>X2</p>
+<h3 id="高亮"><a href="#高亮" class="headerlink" title="高亮"></a>高亮</h3><p><code>==高亮==</code>(需在设置中打开该功能)</p>
+<p>我是最重要的</p>
+<h3 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h3><p>使用 <code>&lt;center&gt;这是要居中的内容&lt;/center&gt;</code>可以使文本居中</p>
+<p>这是要居中的文本内容</p>
+<h3 id="换行符-1"><a href="#换行符-1" class="headerlink" title="换行符"></a>换行符</h3><p>使用 <code>空格 + 空格 + Enter</code>可以实现换行，例如：</p>
+<p>或者可以使用<code>&lt;br/&gt;</code>实现换行。</p>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<p><strong>文本加粗</strong><br>** 正常显示星号 **</p>
+<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line"><span class="bullet">*</span>   星号</span><br><span class="line"><span class="emphasis">_   下划线</span></span><br><span class="line"><span class="emphasis">&#123;&#125;  花括号</span></span><br><span class="line"><span class="emphasis">[]  方括号</span></span><br><span class="line"><span class="emphasis">()  小括号</span></span><br><span class="line"><span class="emphasis">#   井字号</span></span><br><span class="line"><span class="emphasis">+   加号</span></span><br><span class="line"><span class="emphasis">-   减号</span></span><br><span class="line"><span class="emphasis">.   英文句点</span></span><br><span class="line"><span class="emphasis">!   感叹号</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>支持HTML</p>
+<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
+<p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑</span><br><span class="line">&lt;kbd&gt; &lt;/kbd&gt; -- 白色框框</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li><ol>
+<li>建议打开大纲视图<code>Ctrl + Shift + 1</code></li>
+<li>插入表格需要顶格写，否则无法显示</li>
+<li>语法无须刻意记忆，右键可查询</li>
+</ol>
+</li>
+</ol>
+<p>　　　　　　　</p>
+]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>Typora</tag>
+        <tag>MarkDown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>坑</title>
+    <url>/2021/09/18/%E5%9D%91/</url>
+    <content><![CDATA[<h2 id="mysql报java-sql-SQLException-Unknown-character-set-index-for-field-‘255’-received-from-server"><a href="#mysql报java-sql-SQLException-Unknown-character-set-index-for-field-‘255’-received-from-server" class="headerlink" title="mysql报java.sql.SQLException: Unknown character set index for field ‘255’ received from server."></a>mysql报java.sql.SQLException: Unknown character set index for field ‘255’ received from server.</h2><p>原因：mysql-connector-java版本太低。通信错误</p>
+<h2 id="tomcat10项目启动失败，监听器启动失败等错误"><a href="#tomcat10项目启动失败，监听器启动失败等错误" class="headerlink" title="tomcat10项目启动失败，监听器启动失败等错误"></a>tomcat10项目启动失败，监听器启动失败等错误</h2><p>查阅tomcat官网信息可知</p>
+<blockquote>
+<h3 id="Tomcat-10-Software-Downloads"><a href="#Tomcat-10-Software-Downloads" class="headerlink" title="Tomcat 10 Software Downloads"></a>Tomcat 10 Software Downloads</h3><p>Welcome to the Apache Tomcat® 10.x software download page. This page provides download links for obtaining the latest version of Tomcat 10.0.x software, as well as links to the archives of older releases.</p>
+<p>Unsure which version you need? Specification versions implemented, minimum Java version required and lots more useful information may be found on the ‘<a href="https://tomcat.apache.org/whichversion.html">which version?</a>‘ page.</p>
+<p>Users of Tomcat 10 onwards should be aware that, as a result of the move from Java EE to Jakarta EE as part of the transfer of Java EE to the Eclipse Foundation, the primary package for all implemented APIs has changed from ***<code>javax.*</code> to <code>jakarta.* ***</code>. This will almost certainly require code changes to enable applications to migrate from Tomcat 9 and earlier to Tomcat 10 and later. A <a href="https://github.com/apache/tomcat-jakartaee-migration">migration tool</a> has been developed to aid this process.</p>
+</blockquote>
+<p>回退tomcat9即可</p>
+<h2 id="tomcat10运行ssm项目启动成功，代码配置绝对正确，但都是404"><a href="#tomcat10运行ssm项目启动成功，代码配置绝对正确，但都是404" class="headerlink" title="tomcat10运行ssm项目启动成功，代码配置绝对正确，但都是404"></a>tomcat10运行ssm项目启动成功，代码配置绝对正确，但都是404</h2><p>回退tomcat9解决问题，可能与上一个原因一致</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
 </search>
