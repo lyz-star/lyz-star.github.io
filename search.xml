@@ -4359,4 +4359,75 @@
         <tag>C++</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker_GitLab</title>
+    <url>/2021/12/26/Docker-GitLab/</url>
+    <content><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a><strong>安装环境</strong></h2><p><code>GitLab</code> 的搭建有多种方式，在本篇博客将介绍一种比较简单快捷的方式，那就是使用 Docker 来搭建。</p>
+<ul>
+<li>系统：Ubuntu 18.04</li>
+<li>Docker: 18.9.05</li>
+<li>GitLab: 最新版本 latest</li>
+<li>需求内存：最低 2 GB</li>
+</ul>
+<p>想要使用 Docker 来搭建 GitLab 的话需要先安装 Docker, 关于 Docker 的详细安装步骤已经在我的上一篇博客中介绍了。请前往查看：<a href="https://link.zhihu.com/?target=http://jemgeek.com/archives/2019/docker-base-install.html">Docker 之 ubuntu 安装</a>。</p>
+<h2 id="搭建-GitLab"><a href="#搭建-GitLab" class="headerlink" title="搭建 GitLab"></a><strong>搭建 GitLab</strong></h2><p>在按照上篇博客成功安装了 Docker 之后，我们就可以在 Docker 中来搭建 GitLab 了。</p>
+<p><code>GitLab</code> 分为 <strong>社区版</strong>（Community Edition，缩写为 CE）和 <strong>企业版</strong>（Enterprise Edition，缩写为 EE）。社区版是免费的，而企业版包含一些收费服务，一般来说个人开发者用社区版就足够了，本篇博文的教程也只是针对社区版。</p>
+<p>首先需要先下载 GitLab CE 的镜像，使用下面的命令进行下载，因为文件较大，所以可能需要一点时间，耐心等待即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 不加 tag 则默认为最新版本 latest (一般使用这种)</span><br><span class="line">$ sudo docker pull gitlab/gitlab-ce</span><br><span class="line"></span><br><span class="line"># 如果需要下载其他版本，加上对应的 tag 即可，如：</span><br><span class="line">$ sudo docker pull gitlab/gitlab-ce:rc</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic2.zhimg.com/80/v2-fc0f3d16b3d88e03a7209be9bba37cfd_720w.jpg" alt="img"></p>
+<p>下载完成之后只需要一行命令即可启动 <code>GitLab</code> ，复制下面的命令直接运行即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo docker run --detach \</span><br><span class="line">  --hostname gitlab.example.com \</span><br><span class="line">  --publish 443:443 --publish 80:80 --publish 22:22 \</span><br><span class="line">  --name gitlab \</span><br><span class="line">  --restart always \</span><br><span class="line">  --volume /srv/gitlab/config:/etc/gitlab \</span><br><span class="line">  --volume /srv/gitlab/logs:/var/log/gitlab \</span><br><span class="line">  --volume /srv/gitlab/data:/var/opt/gitlab \</span><br><span class="line">  gitlab/gitlab-ce:latest</span><br></pre></td></tr></table></figure>
+
+<p>这条命令很长，我们来分解一下看看每行都代表什么意思。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo docker run --detach \</span><br><span class="line">  --hostname gitlab.example.com \   # 设置主机名或域名</span><br><span class="line">  --publish 443:443 --publish 80:80 --publish 22:22 \ # 本地端口的映射</span><br><span class="line">  --name gitlab \     # gitlab-ce 的镜像运行成为一个容器，这里是对容器的命名</span><br><span class="line">  --restart always \  # 设置重启方式，always 代表一直开启，服务器开机后也会自动开启的</span><br><span class="line">  --volume /srv/gitlab/config:/etc/gitlab \   # 将 gitlab 的配置文件目录映射到 /srv/gitlab/config 目录中</span><br><span class="line">  --volume /srv/gitlab/logs:/var/log/gitlab \ # 将 gitlab 的log文件目录映射到 /srv/gitlab/logs 目录中</span><br><span class="line">  --volume /srv/gitlab/data:/var/opt/gitlab \ # 将 gitlab 的数据文件目录映射到 /srv/gitlab/data 目录中</span><br><span class="line">  gitlab/gitlab-ce:latest  # 需要运行的镜像</span><br></pre></td></tr></table></figure>
+
+<p>运行成功之后，可以使用下面的命令列表所有的容器，当然其中应该包括刚运行的 <code>gitlab</code>容器。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sudo docker container ls</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic4.zhimg.com/80/v2-bfcd5312827d1fd0ddfdc3445933aa4b_720w.png" alt="img"></p>
+<p>如上图所示，可以看到 <code>GitLab</code> 已经在运行了，其他有一个属性 <code>STATUS</code> 为 <code>health: starting</code>，说明 gitlab 的服务正在启动中，还没有启动完毕。等这个状态变成 <code>healthy</code> 时则说明已经部署完成，可以访问了。使用 <code>ip addr</code> 命令查看系统的 IP 地址，然后在浏览器输入地址即可访问。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-c3af0fce87ddd30fe50a05c0e1a237f1_720w.jpg" alt="img"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-3481e697eaab21280ecb81e063928e18_720w.jpg" alt="img"></p>
+<h2 id="配置邮件服务器"><a href="#配置邮件服务器" class="headerlink" title="配置邮件服务器"></a><strong>配置邮件服务器</strong></h2><p>想要让 GitLab 给你发送邮件，还要配置一下邮件服务器，这里以QQ邮箱的 <strong>IMAP/SMTP服务</strong> 来配置。</p>
+<p>打开邮箱-&gt;设置-&gt;账户，然后开启 <strong>IMAP/SMTP服务</strong>，然后根据文档获取 <strong>授权码</strong> ，这步比较重要。</p>
+<p>然后打开在系统中打开文件 <code>/srv/gitlab/config/gitlab.rb</code> 文件，可以使用<code>gedit</code>、<code>vi</code>、<code>vim</code>等等编辑器编辑。找到 <code>Email Settings</code>的注释位置，然后添加以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">### Email Settings</span><br><span class="line">gitlab_rails[&#x27;smtp_enable&#x27;] = true # 开启 SMTP 功能</span><br><span class="line">gitlab_rails[&#x27;smtp_address&#x27;] = &quot;smtp.qq.com&quot;</span><br><span class="line">gitlab_rails[&#x27;smtp_port&#x27;] = 465 # 端口不可以选择587，测试过会发送邮件失败</span><br><span class="line">gitlab_rails[&#x27;smtp_user_name&#x27;] = &quot;212****71@qq.com&quot; # * 你的邮箱账号，也可以是ge**lin@qq.com等</span><br><span class="line">gitlab_rails[&#x27;smtp_password&#x27;] = &quot;cdns********fdgc&quot; # * 授权码，不是密码</span><br><span class="line">gitlab_rails[&#x27;smtp_authentication&#x27;] = &quot;login&quot;</span><br><span class="line">gitlab_rails[&#x27;smtp_enable_starttls_auto&#x27;] = true</span><br><span class="line">gitlab_rails[&#x27;smtp_tls&#x27;] = true</span><br><span class="line">gitlab_rails[&#x27;gitlab_email_from&#x27;] = &#x27;212****71@qq.com&#x27; # * 发件人信息，必须跟‘smtp_user_name’保持一致，否则报错</span><br><span class="line">gitlab_rails[&#x27;smtp_domain&#x27;] = &quot;qq.com&quot; # 修改并不影响 可修改为exmail.qq.com/james.com 经测试完全不影响，删除也不影响，并且发送的邮件都是一样的。</span><br></pre></td></tr></table></figure>
+
+<p>上面这些参数，除了注释开头加了 <code>*</code> 的需要修改为你自己的信息之外，其他信息照写即可，配置完成后保存。然后输入下面的命令使配置生效。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用 Docker安装的 gitlab 只能使用下面的命令，gitlab-ctl reconfigure命令是不会生效的</span><br><span class="line">$ sudo docker exec gitlab gitlab-ctl reconfigure</span><br></pre></td></tr></table></figure>
+
+<p>使配置生效之后我们可以使用 gitlab 自带的工具进行一下测试。依次执行下面的命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 开启 gitlab 的 bash 工具</span><br><span class="line">$ sudo docker exec -it gitlab bash</span><br><span class="line"></span><br><span class="line"># 开启 gitlab-rails 工具</span><br><span class="line">$ gitlab-rails console production</span><br><span class="line"></span><br><span class="line"># 发送邮件进行测试，换自己邮箱哈~</span><br><span class="line">Notify.test_email(&#x27;gekylin@gmail.com&#x27;, &#x27;Message Subject&#x27;, &#x27;Message Body&#x27;).deliver_now</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://pic4.zhimg.com/80/v2-95bbae90a70d7aae088f21e7748c00bb_720w.jpg" alt="img"></p>
+<p>测试完成之后重启 gitlab 即可。</p>
+<h2 id="配置-Git-仓库访问路径"><a href="#配置-Git-仓库访问路径" class="headerlink" title="配置 Git 仓库访问路径"></a><strong>配置 Git 仓库访问路径</strong></h2><p>在之前第一次运行 gitlab 容器的时候，有一个参数 <code>hostname</code> 为 <code>gitlab.example.com</code> , 如果你没有配置相应域名的话，你的仓库的地址将会变为下面这样：</p>
+<ul>
+<li>ssh : <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#x6c;&#x61;&#98;&#46;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#116;&#64;&#103;&#105;&#x74;&#x6c;&#x61;&#98;&#46;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;</a>:James/test.git</li>
+<li>http：<a href="http://gitlab.example.com/James/test.git">http://gitlab.example.com/James/test.git</a></li>
+</ul>
+<p>如果域名不存在的话，这个地址是无法进行 <code>clone</code> 的。</p>
+<p>为了解决这个问题，我们可以设置成 IP 或 你配置了的域名来访问。</p>
+<p>打开文件 <code>/srv/gitlab/config/gitlab.rb</code> 文件并找到 <code># external_url &#39;GENERATED_EXTERNAL_URL&#39;</code> 这行，去掉注释，并按照下面的格式修改。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># ip 形式</span><br><span class="line">external_url &#x27;http://192.168.1.44&#x27;</span><br><span class="line"></span><br><span class="line"># 域名形式</span><br><span class="line">external_url &#x27;http://JemGeek.com&#x27;</span><br><span class="line"></span><br><span class="line"># 子域名</span><br><span class="line">external_url &#x27;http://gitlab.JemGeek.com&#x27;</span><br><span class="line"></span><br><span class="line"># 其他形式</span><br><span class="line">external_url &#x27;http://JemGeek.com/gitlab&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>以上形式都是可以的。修改完成后，输入命令 <code>sudo docker exec gitlab gitlab-ctl reconfigure</code> 使配置生效，然后重启 gitlab 即可。</p>
+<p>重启之后，仓库的地址将变为下面这样，以 ip 形式为例：</p>
+<ul>
+<li>ssh : <a href="mailto:&#103;&#x69;&#116;&#x40;&#x31;&#x39;&#x32;&#46;&#49;&#x36;&#x38;&#46;&#x31;&#x2e;&#52;&#x34;">&#103;&#x69;&#116;&#x40;&#x31;&#x39;&#x32;&#46;&#49;&#x36;&#x38;&#46;&#x31;&#x2e;&#52;&#x34;</a>:James/test.git</li>
+<li>http：<a href="https://link.zhihu.com/?target=http://192.168.1.44/James/test.git">http://192.168.1.44/James/test.git</a></li>
+</ul>
+<h2 id="容器的常用操作"><a href="#容器的常用操作" class="headerlink" title="容器的常用操作"></a><strong>容器的常用操作</strong></h2><p>在 Docker 中，gitlab 是作为一个容器存在的，gitlab 的所有程序，配置，依赖等都在这个容器中。下面列出一些容器的常用操作命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 开启 gitlab 容器</span><br><span class="line"># 上面那个特别长的那一条命令仅在第一次运行 gitlab 的时候需要</span><br><span class="line"># 之后开启 gitlab 使用下面的命令即可</span><br><span class="line">$ sudo docker start gitlab</span><br><span class="line"></span><br><span class="line"># 关闭 gitlab</span><br><span class="line">$ sudo docker stop gitlab</span><br><span class="line"></span><br><span class="line"># 重启 gitlab</span><br><span class="line">$ sudo docker restart gitlab</span><br></pre></td></tr></table></figure>
+
+<p>转载<a href="https://zhuanlan.zhihu.com/p/63786567">使用 Docker 搭建 GitLab - 知乎 (zhihu.com)</a></p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
 </search>
