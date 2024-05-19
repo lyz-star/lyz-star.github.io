@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 首次推送
 date: 2024-05-19
 description: 这是我的首次推送
