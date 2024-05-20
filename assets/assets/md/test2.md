@@ -1,10 +1,10 @@
 ---
-title: My First Blog Post
+title: test2
 date: 2022-07-01
-description: This is the first post of my new Astro blog.
+description: This is the first post of my neblog.
 author: ssss
 topicImg: 1.jpeg
-tags: ["astro", "blogging", "learning in public"]
+tags: ["test2", "test", "learning in public"]
 ---
 # My First Blog Post
 
