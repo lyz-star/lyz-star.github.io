@@ -24507,7 +24507,7 @@ a2E(){var s=0,r=A.R(t.Wk),q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b
 var $async$a2E=A.S(function(a,a0){if(a===1)return A.O(a0,r)
 while(true)switch(s){case 0:b=A.b([],t.jx)
 p=$.aK1,o=t.N,n=0
-case 3:if(!(n<5)){s=5
+case 3:if(!(n<2)){s=5
 break}m=p[n]
 s=6
 return A.Y(A.a2D("assets/md/"+m),$async$a2E)
@@ -83803,7 +83803,7 @@ $.as3=1
 $.alg=-9007199254740992
 $.VA=!1
 $.lq=A.b([],t.jx)
-$.aK1=A.b(["first_post.md","test1.md","test2.md","test3.md","test4.md"],t.s)
+$.aK1=A.b(["first_post.md","about.md"],t.s)
 $.asS=A.j(t.r3,A.aq("mI?"))
 $.aCF=A.j(t.S,A.aq("aCE"))
 $.als=A.j(t.D2,t.M)

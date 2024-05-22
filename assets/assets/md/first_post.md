@@ -1,7 +1,7 @@
 ---
 title: 首次推送
 date: 2024-05-19
-description: 这是我的首次推送
+description: 这是我的首次推送，同于测试用途
 author: lyz
 topicImg: 1.jpeg
 tags: ["first", "test"]
